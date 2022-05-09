@@ -28,7 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: narmitag
 github_username:  narmitag
 domain: neilarmitage.com       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://neilarmitage.com  # the base hostname and protocol for your site, e.g. http://example.com
+url: https://www.neilarmitage.com  # the base hostname and protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima

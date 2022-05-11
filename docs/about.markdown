@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+My main aim for this site is to write simple HOWTO blogs about cloud based things. I've become increasing anoyed with either video blogs or over complex blogs where the author is trying to show how clever they are. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I don't claim to be an expert in anything, I've been around long enough to know anyone claiming to be an expert in any cloud technology is probably lying to themselves. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+I have been kicking around in IT for over 35 years now in various companies and startups including Skyscanner, VMWare, Continuent and at the momement I'm a Consultant at Amido.

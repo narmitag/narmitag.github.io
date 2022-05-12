@@ -1,0 +1,725 @@
+Preparing your terminal...
+[cloudshell-user@ip-10-1-181-252 ~]$ Try these commands to get started:
+aws help  or  aws <command> help  or  aws <command> --cli-auto-prompt
+[cloudshell-user@ip-10-1-181-252 ~]$ wget https://raw.githubusercontent.com/narmitag/eks/8eb92ca5f1883f41be065d0db5b1c1adde2bbeb2/setup/cloudshell.sh
+--2022-05-12 07:59:31--  https://raw.githubusercontent.com/narmitag/eks/8eb92ca5f1883f41be065d0db5b1c1adde2bbeb2/setup/cloudshell.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 523 [text/plain]
+Saving to: ‘cloudshell.sh’
+
+100%[==============================================================================================================================================================================================================================================================>] 523         --.-K/s   in 0s      
+
+2022-05-12 07:59:31 (26.7 MB/s) - ‘cloudshell.sh’ saved [523/523]
+
+[cloudshell-user@ip-10-1-181-252 ~]$ chmod +x cloudshell.sh 
+[cloudshell-user@ip-10-1-181-252 ~]$ ./cloudshell.sh 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   154  100   154    0     0   3445      0 --:--:-- --:--:-- --:--:--  3500
+100 43.5M  100 43.5M    0     0   158M      0 --:--:-- --:--:-- --:--:--  158M
+Loaded plugins: ovl, priorities
+Package jq-1.5-1.amzn2.0.2.x86_64 already installed and latest version
+No package moreutils available.
+No package envsubst available.
+Resolving Dependencies
+--> Running transaction check
+---> Package bash-completion.noarch 1:2.1-6.amzn2 will be installed
+--> Processing Dependency: /usr/bin/pkg-config for package: 1:bash-completion-2.1-6.amzn2.noarch
+---> Package gettext.x86_64 0:0.19.8.1-3.amzn2 will be installed
+--> Processing Dependency: gettext-libs(x86-64) = 0.19.8.1-3.amzn2 for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Processing Dependency: libgomp.so.1(GOMP_4.0)(64bit) for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Processing Dependency: libgomp.so.1(GOMP_1.0)(64bit) for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Processing Dependency: libgomp.so.1()(64bit) for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Processing Dependency: libgettextsrc-0.19.8.1.so()(64bit) for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Processing Dependency: libgettextlib-0.19.8.1.so()(64bit) for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Processing Dependency: libcroco-0.6.so.3()(64bit) for package: gettext-0.19.8.1-3.amzn2.x86_64
+--> Running transaction check
+---> Package gettext-libs.x86_64 0:0.19.8.1-3.amzn2 will be installed
+---> Package libcroco.x86_64 0:0.6.12-6.amzn2 will be installed
+---> Package libgomp.x86_64 0:7.3.1-14.amzn2 will be installed
+---> Package pkgconfig.x86_64 1:0.27.1-4.amzn2.0.2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================================================================================================================================================
+ Package                                                                   Arch                                                             Version                                                                          Repository                                                            Size
+========================================================================================================================================================================================================================================================================================================
+Installing:
+ bash-completion                                                           noarch                                                           1:2.1-6.amzn2                                                                    amzn2-core                                                            85 k
+ gettext                                                                   x86_64                                                           0.19.8.1-3.amzn2                                                                 amzn2-core                                                           1.0 M
+Installing for dependencies:
+ gettext-libs                                                              x86_64                                                           0.19.8.1-3.amzn2                                                                 amzn2-core                                                           500 k
+ libcroco                                                                  x86_64                                                           0.6.12-6.amzn2                                                                   amzn2-core                                                           103 k
+ libgomp                                                                   x86_64                                                           7.3.1-14.amzn2                                                                   amzn2-core                                                           204 k
+ pkgconfig                                                                 x86_64                                                           1:0.27.1-4.amzn2.0.2                                                             amzn2-core                                                            54 k
+
+Transaction Summary
+========================================================================================================================================================================================================================================================================================================
+Install  2 Packages (+4 Dependent packages)
+
+Total download size: 2.0 M
+Installed size: 7.2 M
+Downloading packages:
+(1/6): bash-completion-2.1-6.amzn2.noarch.rpm                                                                                                                                                                                                                                    |  85 kB  00:00:00     
+(2/6): gettext-0.19.8.1-3.amzn2.x86_64.rpm                                                                                                                                                                                                                                       | 1.0 MB  00:00:00     
+(3/6): gettext-libs-0.19.8.1-3.amzn2.x86_64.rpm                                                                                                                                                                                                                                  | 500 kB  00:00:00     
+(4/6): libcroco-0.6.12-6.amzn2.x86_64.rpm                                                                                                                                                                                                                                        | 103 kB  00:00:00     
+(5/6): libgomp-7.3.1-14.amzn2.x86_64.rpm                                                                                                                                                                                                                                         | 204 kB  00:00:00     
+(6/6): pkgconfig-0.27.1-4.amzn2.0.2.x86_64.rpm                                                                                                                                                                                                                                   |  54 kB  00:00:00     
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                                   9.7 MB/s | 2.0 MB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libgomp-7.3.1-14.amzn2.x86_64                                                                                                                                                                                                                                                        1/6 
+  Installing : libcroco-0.6.12-6.amzn2.x86_64                                                                                                                                                                                                                                                       2/6 
+  Installing : gettext-libs-0.19.8.1-3.amzn2.x86_64                                                                                                                                                                                                                                                 3/6 
+  Installing : 1:pkgconfig-0.27.1-4.amzn2.0.2.x86_64                                                                                                                                                                                                                                                4/6 
+  Installing : 1:bash-completion-2.1-6.amzn2.noarch                                                                                                                                                                                                                                                 5/6 
+  Installing : gettext-0.19.8.1-3.amzn2.x86_64                                                                                                                                                                                                                                                      6/6 
+  Verifying  : libcroco-0.6.12-6.amzn2.x86_64                                                                                                                                                                                                                                                       1/6 
+  Verifying  : 1:bash-completion-2.1-6.amzn2.noarch                                                                                                                                                                                                                                                 2/6 
+  Verifying  : 1:pkgconfig-0.27.1-4.amzn2.0.2.x86_64                                                                                                                                                                                                                                                3/6 
+  Verifying  : gettext-0.19.8.1-3.amzn2.x86_64                                                                                                                                                                                                                                                      4/6 
+  Verifying  : gettext-libs-0.19.8.1-3.amzn2.x86_64                                                                                                                                                                                                                                                 5/6 
+  Verifying  : libgomp-7.3.1-14.amzn2.x86_64                                                                                                                                                                                                                                                        6/6 
+
+Installed:
+  bash-completion.noarch 1:2.1-6.amzn2                                                                                                                 gettext.x86_64 0:0.19.8.1-3.amzn2                                                                                                                
+
+Dependency Installed:
+  gettext-libs.x86_64 0:0.19.8.1-3.amzn2                                       libcroco.x86_64 0:0.6.12-6.amzn2                                       libgomp.x86_64 0:7.3.1-14.amzn2                                       pkgconfig.x86_64 1:0.27.1-4.amzn2.0.2                                      
+
+Complete!
+‘/tmp/eksctl’ -> ‘/usr/local/bin/eksctl’
+[cloudshell-user@ip-10-1-181-252 ~]$ 
+[cloudshell-user@ip-10-1-181-252 ~]$ 
+[cloudshell-user@ip-10-1-181-252 ~]$ 
+[cloudshell-user@ip-10-1-181-252 ~]$ 
+[cloudshell-user@ip-10-1-181-252 ~]$ 
+[cloudshell-user@ip-10-1-181-252 ~]$ eksctl 
+The official CLI for Amazon EKS
+
+Usage: eksctl [command] [flags]
+
+Commands:
+  eksctl anywhere                        EKS anywhere
+  eksctl associate                       Associate resources with a cluster
+  eksctl completion                      Generates shell completion scripts for bash, zsh or fish
+  eksctl create                          Create resource(s)
+  eksctl delete                          Delete resource(s)
+  eksctl deregister                      Deregister a non-EKS cluster
+  eksctl disassociate                    Disassociate resources from a cluster
+  eksctl drain                           Drain resource(s)
+  eksctl enable                          Enable features in a cluster
+  eksctl get                             Get resource(s)
+  eksctl help                            Help about any command
+  eksctl info                            Output the version of eksctl, kubectl and OS info
+  eksctl register                        Register a non-EKS cluster
+  eksctl scale                           Scale resources(s)
+  eksctl set                             Set values
+  eksctl unset                           Unset values
+  eksctl update                          Update resource(s)
+  eksctl upgrade                         Upgrade resource(s)
+  eksctl utils                           Various utils
+  eksctl version                         Output the version of eksctl
+
+Common flags:
+  -C, --color string   toggle colorized logs (valid options: true, false, fabulous) (default "true")
+  -d, --dumpLogs       dump logs to disk on failure if set to true
+  -h, --help           help for this command
+  -v, --verbose int    set log level, use 0 to silence, 4 for debugging and 5 for debugging with AWS debug logging (default 3)
+
+Use 'eksctl [command] --help' for more information about a command.
+
+
+For detailed docs go to https://eksctl.io/
+
+[cloudshell-user@ip-10-1-181-252 ~]$ kubectl
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
+
+Basic Commands (Beginner):
+  create          Create a resource from a file or from stdin
+  expose          Take a replication controller, service, deployment or pod and expose it as a new Kubernetes service
+  run             Run a particular image on the cluster
+  set             Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain         Get documentation for a resource
+  get             Display one or many resources
+  edit            Edit a resource on the server
+  delete          Delete resources by file names, stdin, resources and names, or by resources and label selector
+
+Deploy Commands:
+  rollout         Manage the rollout of a resource
+  scale           Set a new size for a deployment, replica set, or replication controller
+  autoscale       Auto-scale a deployment, replica set, stateful set, or replication controller
+
+Cluster Management Commands:
+  certificate     Modify certificate resources.
+  cluster-info    Display cluster information
+  top             Display resource (CPU/memory) usage
+  cordon          Mark node as unschedulable
+  uncordon        Mark node as schedulable
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: ca-cluster
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: ca-cluster
+  region: us-east-1
+  version: "1.22"
+
+availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
+
+managedNodeGroups:
+- name: nodegroupA
+  desiredCapacity: 1
+  availabilityZones: ["us-east-1a"]
+  instanceType: t3.small
+  spot: true
+- name: nodegroupB
+  desiredCapacity: 1
+  availabilityZones: ["us-east-1b"]
+  instanceType: t3.small
+  spot: true
+- name: nodegroupC
+  desiredCapacity: 1
+  availabilityZones: ["us-east-1c"]
+  instanceType: t3.small
+  spot: true
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+~                                                                                                                                                                                                                                                                                                       
+"ca-cluster.yaml" 27L, 548B written
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl create cluster -f ca-cluster.yaml
+2022-05-12 08:03:06 [ℹ]  eksctl version 0.96.0
+2022-05-12 08:03:06 [ℹ]  using region us-east-1
+2022-05-12 08:03:06 [ℹ]  subnets for us-east-1a - public:192.168.0.0/19 private:192.168.96.0/19
+2022-05-12 08:03:06 [ℹ]  subnets for us-east-1b - public:192.168.32.0/19 private:192.168.128.0/19
+2022-05-12 08:03:06 [ℹ]  subnets for us-east-1c - public:192.168.64.0/19 private:192.168.160.0/19
+2022-05-12 08:03:06 [ℹ]  nodegroup "nodegroupA" will use "" [AmazonLinux2/1.22]
+2022-05-12 08:03:06 [ℹ]  nodegroup "nodegroupB" will use "" [AmazonLinux2/1.22]
+2022-05-12 08:03:06 [ℹ]  nodegroup "nodegroupC" will use "" [AmazonLinux2/1.22]
+2022-05-12 08:03:06 [ℹ]  using Kubernetes version 1.22
+2022-05-12 08:03:06 [ℹ]  creating EKS cluster "ca-cluster" in "us-east-1" region with managed nodes
+2022-05-12 08:03:06 [ℹ]  3 nodegroups (nodegroupA, nodegroupB, nodegroupC) were included (based on the include/exclude rules)
+2022-05-12 08:03:06 [ℹ]  will create a CloudFormation stack for cluster itself and 0 nodegroup stack(s)
+2022-05-12 08:03:06 [ℹ]  will create a CloudFormation stack for cluster itself and 3 managed nodegroup stack(s)
+2022-05-12 08:03:06 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=us-east-1 --cluster=ca-cluster'
+2022-05-12 08:03:06 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "ca-cluster" in "us-east-1"
+2022-05-12 08:03:06 [ℹ]  CloudWatch logging will not be enabled for cluster "ca-cluster" in "us-east-1"
+2022-05-12 08:03:06 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=us-east-1 --cluster=ca-cluster'
+2022-05-12 08:03:06 [ℹ]  
+2 sequential tasks: { create cluster control plane "ca-cluster", 
+    2 sequential sub-tasks: { 
+        wait for control plane to become ready,
+        3 parallel sub-tasks: { 
+            create managed nodegroup "nodegroupA",
+            create managed nodegroup "nodegroupB",
+            create managed nodegroup "nodegroupC",
+        },
+    } 
+}
+2022-05-12 08:03:06 [ℹ]  building cluster stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:03:06 [ℹ]  deploying stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:03:36 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:04:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:05:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:06:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:07:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:08:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:09:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:10:06 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:11:07 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:12:07 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:13:07 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:14:07 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-cluster"
+2022-05-12 08:16:08 [ℹ]  building managed nodegroup stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:16:08 [ℹ]  building managed nodegroup stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:16:08 [ℹ]  building managed nodegroup stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:16:08 [ℹ]  deploying stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:16:08 [ℹ]  deploying stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:16:08 [ℹ]  deploying stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:16:08 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:16:08 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:16:08 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:16:38 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:16:38 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:16:38 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:17:19 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:17:19 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:17:25 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:18:07 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:18:40 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:18:47 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:19:08 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:20:26 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:20:34 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:20:35 [ℹ]  waiting for the control plane availability...
+2022-05-12 08:20:35 [✔]  saved kubeconfig as "/home/cloudshell-user/.kube/config"
+2022-05-12 08:20:35 [ℹ]  no tasks
+2022-05-12 08:20:35 [✔]  all EKS cluster resources for "ca-cluster" have been created
+2022-05-12 08:20:35 [ℹ]  nodegroup "nodegroupA" has 1 node(s)
+2022-05-12 08:20:35 [ℹ]  node "ip-192-168-11-66.ec2.internal" is ready
+2022-05-12 08:20:35 [ℹ]  waiting for at least 1 node(s) to become ready in "nodegroupA"
+2022-05-12 08:20:35 [ℹ]  nodegroup "nodegroupA" has 1 node(s)
+2022-05-12 08:20:35 [ℹ]  node "ip-192-168-11-66.ec2.internal" is ready
+2022-05-12 08:20:35 [ℹ]  nodegroup "nodegroupB" has 1 node(s)
+2022-05-12 08:20:35 [ℹ]  node "ip-192-168-51-71.ec2.internal" is ready
+2022-05-12 08:20:35 [ℹ]  waiting for at least 1 node(s) to become ready in "nodegroupB"
+2022-05-12 08:20:35 [ℹ]  nodegroup "nodegroupB" has 1 node(s)
+2022-05-12 08:20:35 [ℹ]  node "ip-192-168-51-71.ec2.internal" is ready
+2022-05-12 08:20:35 [ℹ]  nodegroup "nodegroupC" has 1 node(s)
+2022-05-12 08:20:35 [ℹ]  node "ip-192-168-73-100.ec2.internal" is ready
+2022-05-12 08:20:35 [ℹ]  waiting for at least 1 node(s) to become ready in "nodegroupC"
+2022-05-12 08:20:35 [ℹ]  nodegroup "nodegroupC" has 1 node(s)
+2022-05-12 08:20:35 [ℹ]  node "ip-192-168-73-100.ec2.internal" is ready
+2022-05-12 08:20:35 [✖]  parsing kubectl version string  (upstream error: error: exec plugin: invalid apiVersion "client.authentication.k8s.io/v1alpha1"
+) / "0.0.0": Version string empty
+2022-05-12 08:20:35 [ℹ]  cluster should be functional despite missing (or misconfigured) client binaries
+2022-05-12 08:20:35 [✔]  EKS cluster "ca-cluster" in "us-east-1" region is ready
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ aws eks update-kubeconfig --name ca-cluster --region=us-east-1
+Added new context arn:aws:eks:us-east-1:566428305604:cluster/ca-cluster to /home/cloudshell-user/.kube/config
+
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ kubectl get nodes
+NAME                             STATUS   ROLES    AGE   VERSION
+ip-192-168-11-66.ec2.internal    Ready    <none>   17m   v1.22.6-eks-7d68063
+ip-192-168-51-71.ec2.internal    Ready    <none>   17m   v1.22.6-eks-7d68063
+ip-192-168-73-100.ec2.internal   Ready    <none>   17m   v1.22.6-eks-7d68063
+
+
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='$CLUSTER_NAME']].AutoScalingGroupName" --output text > asg.txt
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ for x in $(cat asg.txt); do aws autoscaling update-auto-scaling-group --auto-scaling-group-name  $x  --min-size 1 --desired-capacity 1 --max-size 2; done
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl utils associate-iam-oidc-provider \
+>     --cluster $CLUSTER_NAME \
+>     --approve
+2022-05-12 08:25:44 [ℹ]  eksctl version 0.96.0
+2022-05-12 08:25:44 [ℹ]  using region us-east-1
+2022-05-12 08:25:44 [ℹ]  will create IAM Open ID Connect provider for cluster "ca-cluster" in "us-east-1"
+2022-05-12 08:25:45 [✔]  created IAM Open ID Connect provider for cluster "ca-cluster" in "us-east-1"
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ aws iam create-policy   \
+>   --policy-name ${CLUSTER}-k8s-asg-policy \
+>   --policy-document file://k8s-asg-policy.json
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+aws: error: argument --policy-name: expected one argument
+
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ aws iam create-policy     --policy-name ${CLUSTER}-k8s-asg-policy   --policy-document file://k8s-asg-policy.json
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+aws: error: argument --policy-name: expected one argument
+
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ aws iam create-policy     --policy-name ${CLUSTER_NAME}-k8s-asg-policy   --policy-document file://k8s-asg-policy.json
+{
+    "Policy": {
+        "PolicyName": "ca-cluster-k8s-asg-policy",
+        "PolicyId": "ANPAYHYOCBDCEETZ2NA33",
+        "Arn": "arn:aws:iam::566428305604:policy/ca-cluster-k8s-asg-policy",
+        "Path": "/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 0,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "CreateDate": "2022-05-12T08:26:23+00:00",
+        "UpdateDate": "2022-05-12T08:26:23+00:00"
+    }
+}
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl create iamserviceaccount \
+>   --name cluster-autoscaler \
+>   --namespace kube-system \
+>   --cluster $CLUSTER_NAME \
+>   --attach-policy-arn "arn:aws:iam::${ACCOUNT_ID}:policy/${CLUSTER}-k8s-asg-policy" \
+>   --approve \
+>   --override-existing-serviceaccounts
+2022-05-12 08:26:39 [ℹ]  eksctl version 0.96.0
+2022-05-12 08:26:39 [ℹ]  using region us-east-1
+2022-05-12 08:26:40 [ℹ]  1 iamserviceaccount (kube-system/cluster-autoscaler) was included (based on the include/exclude rules)
+2022-05-12 08:26:40 [!]  metadata of serviceaccounts that exist in Kubernetes will be updated, as --override-existing-serviceaccounts was set
+2022-05-12 08:26:40 [ℹ]  1 task: { 
+    2 sequential sub-tasks: { 
+        create IAM role for serviceaccount "kube-system/cluster-autoscaler",
+        create serviceaccount "kube-system/cluster-autoscaler",
+    } }2022-05-12 08:26:40 [ℹ]  building iamserviceaccount stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:26:40 [ℹ]  deploying stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:26:40 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:27:10 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:27:41 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:27:41 [ℹ]  1 error(s) occurred and IAM Role stacks haven't been updated properly, you may wish to check CloudFormation console
+2022-05-12 08:27:41 [✖]  waiter state transitioned to Failure
+Error: failed to create iamserviceaccount(s)
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl create iamserviceaccount   --name cluster-autoscaler   --namespace kube-system   --cluster $CLUSTER_NAME   --attach-policy-arn "arn:aws:iam::${ACCOUNT_ID}:policy/${CLUSTER}-k8s-asg-policy"   --approve   --override-existing-serviceaccounts
+2022-05-12 08:27:59 [ℹ]  eksctl version 0.96.0
+2022-05-12 08:27:59 [ℹ]  using region us-east-1
+2022-05-12 08:27:59 [ℹ]  1 existing iamserviceaccount(s) (kube-system/cluster-autoscaler) will be excluded
+2022-05-12 08:27:59 [ℹ]  1 iamserviceaccount (kube-system/cluster-autoscaler) was excluded (based on the include/exclude rules)
+2022-05-12 08:27:59 [!]  metadata of serviceaccounts that exist in Kubernetes will be updated, as --override-existing-serviceaccounts was set
+2022-05-12 08:27:59 [ℹ]  no tasks
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ kubectl -n kube-system describe sa cluster-autoscaler
+Error from server (NotFound): serviceaccounts "cluster-autoscaler" not found
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl create iamserviceaccount \
+>   --name cluster-autoscaler \
+>   --namespace kube-system \
+>   --cluster $CLUSTER_NAME
+Error: --attach-policy-arn or --attach-role-arn must be set
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl delete iamserviceaccount   --name cluster-autoscaler   --namespace kube-system   --cluster $CLUSTER_NAME
+2022-05-12 08:28:56 [ℹ]  eksctl version 0.96.0
+2022-05-12 08:28:56 [ℹ]  using region us-east-1
+2022-05-12 08:28:56 [ℹ]  1 iamserviceaccount (kube-system/cluster-autoscaler) was included (based on the include/exclude rules)
+2022-05-12 08:28:56 [ℹ]  1 task: { 
+    2 sequential sub-tasks: { 
+        delete IAM role for serviceaccount "kube-system/cluster-autoscaler" [async],
+        delete serviceaccount "kube-system/cluster-autoscaler",
+    } }2022-05-12 08:28:57 [ℹ]  will delete stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:28:57 [ℹ]  serviceaccount "kube-system/cluster-autoscaler" was already deleted
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl create iamserviceaccount   --name cluster-autoscaler   --namespace kube-system   --cluster $CLUSTER_NAME   --attach-policy-arn "arn:aws:iam::${ACCOUNT_ID}:policy/${CLUSTER}-k8s-asg-policy"   --approve   --override-existing-serviceaccounts
+2022-05-12 08:29:05 [ℹ]  eksctl version 0.96.0
+# ---
+# apiVersion: v1
+# kind: ServiceAccount
+# metadata:
+#   labels:
+#     k8s-addon: cluster-autoscaler.addons.k8s.io
+#     k8s-app: cluster-autoscaler
+#   name: cluster-autoscaler
+#   namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cluster-autoscaler
+  labels:
+    k8s-addon: cluster-autoscaler.addons.k8s.io
+    k8s-app: cluster-autoscaler
+rules:
+  - apiGroups: [""]
+    resources: ["events", "endpoints"]
+    verbs: ["create", "patch"]
+  - apiGroups: [""]
+    resources: ["pods/eviction"]
+    verbs: ["create"]
+  - apiGroups: [""]
+    resources: ["pods/status"]
+    verbs: ["update"]
+  - apiGroups: [""]
+    resources: ["endpoints"]
+    resourceNames: ["cluster-autoscaler"]
+    verbs: ["get", "update"]
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["watch", "list", "get", "update"]
+  - apiGroups: [""]
+    resources:
+      - "pods"
+      - "services"
+      - "replicationcontrollers"
+      - "persistentvolumeclaims"
+      - "persistentvolumes"
+    verbs: ["watch", "list", "get"]
+  - apiGroups: ["extensions"]
+    resources: ["replicasets", "daemonsets"]
+    verbs: ["watch", "list", "get"]
+  - apiGroups: ["policy"]
+    resources: ["poddisruptionbudgets"]
+    verbs: ["watch", "list"]
+  - apiGroups: ["apps"]
+    resources: ["statefulsets", "replicasets", "daemonsets"]
+    verbs: ["watch", "list", "get"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["storageclasses", "csinodes"]
+    verbs: ["watch", "list", "get"]
+  - apiGroups: ["batch", "extensions"]
+    resources: ["jobs"]
+    verbs: ["get", "list", "watch", "patch"]
+  - apiGroups: ["coordination.k8s.io"]
+    resources: ["leases"]
+    verbs: ["create"]
+  - apiGroups: ["coordination.k8s.io"]
+    resourceNames: ["cluster-autoscaler"]
+    resources: ["leases"]
+    verbs: ["get", "update"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+  labels:
+    k8s-addon: cluster-autoscaler.addons.k8s.io
+    k8s-app: cluster-autoscaler
+rules:
+  - apiGroups: [""]
+    resources: ["configmaps"]
+    verbs: ["create","list","watch"]
+  - apiGroups: [""]
+    resources: ["configmaps"]
+    resourceNames: ["cluster-autoscaler-status", "cluster-autoscaler-priority-expander"]
+    verbs: ["delete", "get", "update", "watch"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-autoscaler
+  labels:
+    k8s-addon: cluster-autoscaler.addons.k8s.io
+    k8s-app: cluster-autoscaler
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-autoscaler
+subjects:
+  - kind: ServiceAccount
+    name: cluster-autoscaler
+    namespace: kube-system
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+  labels:
+    k8s-addon: cluster-autoscaler.addons.k8s.io
+    k8s-app: cluster-autoscaler
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: cluster-autoscaler
+subjects:
+  - kind: ServiceAccount
+    name: cluster-autoscaler
+    namespace: kube-system
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+  labels:
+    app: cluster-autoscaler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cluster-autoscaler
+  template:
+    metadata:
+      labels:
+        app: cluster-autoscaler
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8085'
+    spec:
+      serviceAccountName: cluster-autoscaler
+      containers:
+        - image: k8s.gcr.io/cluster-autoscaler:v1.20.0
+          name: cluster-autoscaler
+          resources:
+            limits:
+              cpu: 100m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 500Mi
+          command:
+            - ./cluster-autoscaler
+            - --v=4
+            - --stderrthreshold=info
+            - --cloud-provider=aws
+            - --skip-nodes-with-local-storage=false
+            - --expander=least-waste
+            - --node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/$CLUSTER_NAME
+            - --balance-similar-node-groups
+            - --skip-nodes-with-system-pods=false
+          volumeMounts:
+            - name: ssl-certs
+              mountPath: /etc/ssl/certs/ca-certificates.crt
+              readOnly: true
+          imagePullPolicy: "Always"
+      volumes:
+        - name: ssl-certs
+          hostPath:
+            path: "/etc/ssl/certs/ca-bundle.crt"
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ envsubst < cluster-autoscaler-autodiscover.yaml | kubectl apply -f -
+clusterrole.rbac.authorization.k8s.io/cluster-autoscaler created
+role.rbac.authorization.k8s.io/cluster-autoscaler created
+clusterrolebinding.rbac.authorization.k8s.io/cluster-autoscaler created
+rolebinding.rbac.authorization.k8s.io/cluster-autoscaler created
+deployment.apps/cluster-autoscaler created
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ kubectl -n kube-system annotate deployment.apps/cluster-autoscaler  cluster-autoscaler.kubernetes.io/safe-to-evict="false"
+deployment.apps/cluster-autoscaler annotated
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ export AUTOSCALER_VERSION=1.22.2
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ kubectl -n kube-system \
+>     set image deployment.apps/cluster-autoscaler \
+>     cluster-autoscaler=us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:v${AUTOSCALER_VERSION}
+deployment.apps/cluster-autoscaler image updated
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ export AUTOSCALER_VERSION=1.22.2^C
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ k get po -A
+bash: k: command not found
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ kubectl  get po -A
+NAMESPACE     NAME                                  READY   STATUS    RESTARTS   AGE
+kube-system   aws-node-2lw4c                        1/1     Running   0          15m
+kube-system   aws-node-rbz74                        1/1     Running   0          16m
+kube-system   aws-node-tcg9m                        1/1     Running   0          16m
+kube-system   cluster-autoscaler-56f7bd9899-57c8d   1/1     Running   0          13s
+kube-system   coredns-7f5998f4c-jxlkq               1/1     Running   0          24m
+kube-system   coredns-7f5998f4c-xbq24               1/1     Running   0          24m
+kube-system   kube-proxy-5rfmc                      1/1     Running   0          16m
+kube-system   kube-proxy-8s9bf                      1/1     Running   0          15m
+kube-system   kube-proxy-l8xgd                      1/1     Running   0          16m
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ kubectl  get po -A
+NAMESPACE     NAME                                  READY   STATUS    RESTARTS   AGE
+kube-system   aws-node-2lw4c                        1/1     Running   0          16m
+kube-system   aws-node-rbz74                        1/1     Running   0          16m
+kube-system   aws-node-tcg9m                        1/1     Running   0          16m
+kube-system   cluster-autoscaler-56f7bd9899-57c8d   1/1     Running   0          17s
+kube-system   coredns-7f5998f4c-jxlkq               1/1     Running   0          24m
+kube-system   coredns-7f5998f4c-xbq24               1/1     Running   0          24m
+kube-system   kube-proxy-5rfmc                      1/1     Running   0          16m
+kube-system   kube-proxy-8s9bf                      1/1     Running   0          16m
+kube-system   kube-proxy-l8xgd                      1/1     Running   0          16m
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 
+
+
+
+delete
+
+
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ eksctl delete cluster ca-cluster
+2022-05-12 08:36:38 [ℹ]  eksctl version 0.96.0
+2022-05-12 08:36:38 [ℹ]  using region us-east-1
+2022-05-12 08:36:38 [ℹ]  deleting EKS cluster "ca-cluster"
+2022-05-12 08:36:39 [ℹ]  will drain 0 unmanaged nodegroup(s) in cluster "ca-cluster"
+2022-05-12 08:36:39 [ℹ]  deleted 0 Fargate profile(s)
+2022-05-12 08:36:39 [✔]  kubeconfig has been updated
+2022-05-12 08:36:39 [ℹ]  cleaning up AWS load balancers created by Kubernetes objects of Kind Service or Ingress
+2022-05-12 08:36:48 [ℹ]  
+3 sequential tasks: { 
+    3 parallel sub-tasks: { 
+        delete nodegroup "nodegroupC",
+        delete nodegroup "nodegroupA",
+        delete nodegroup "nodegroupB",
+    }, 
+    2 sequential sub-tasks: { 
+        2 sequential sub-tasks: { 
+            delete IAM role for serviceaccount "kube-system/cluster-autoscaler",
+            delete serviceaccount "kube-system/cluster-autoscaler",
+        },
+        delete IAM OIDC provider,
+    }, delete cluster control plane "ca-cluster" [async] 
+}
+2022-05-12 08:36:48 [ℹ]  will delete stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:36:48 [ℹ]  waiting for stack "eksctl-ca-cluster-nodegroup-nodegroupB" to get deleted
+2022-05-12 08:36:48 [ℹ]  will delete stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:36:48 [ℹ]  waiting for stack "eksctl-ca-cluster-nodegroup-nodegroupC" to get deleted
+2022-05-12 08:36:48 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:36:49 [ℹ]  will delete stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:36:49 [ℹ]  waiting for stack "eksctl-ca-cluster-nodegroup-nodegroupA" to get deleted
+2022-05-12 08:36:49 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:36:49 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:37:18 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:37:19 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:37:19 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:37:51 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:37:54 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:38:09 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:38:29 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:39:49 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:39:54 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:40:14 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:40:32 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:40:51 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:41:12 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:41:35 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:42:13 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:42:46 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:42:57 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:43:05 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:43:35 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:44:23 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:44:47 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupC"
+2022-05-12 08:45:04 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupB"
+2022-05-12 08:46:00 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-nodegroup-nodegroupA"
+2022-05-12 08:46:02 [ℹ]  will delete stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:46:02 [ℹ]  waiting for stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler" to get deleted
+2022-05-12 08:46:04 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:46:34 [ℹ]  waiting for CloudFormation stack "eksctl-ca-cluster-addon-iamserviceaccount-kube-system-cluster-autoscaler"
+2022-05-12 08:46:34 [ℹ]  deleted serviceaccount "kube-system/cluster-autoscaler"
+2022-05-12 08:46:34 [ℹ]  1 error(s) occurred while deleting cluster with nodegroup(s)
+2022-05-12 08:46:34 [✖]  deleting OIDC provider: operation error IAM: DeleteOpenIDConnectProvider, https response error StatusCode: 403, RequestID: 3944137c-c5ff-4263-8156-db113d89d620, api error AccessDenied: User: arn:aws:iam::566428305604:user/cloud_user is not authorized to perform: iam:DeleteOpenIDConnectProvider on resource: arn:aws:iam::566428305604:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/7B0C3F25F3AC9E9E3C2EEDB41AC61FB9 with an explicit deny in a service control policy
+Error: failed to delete cluster with nodegroup(s)
+[cloudshell-user@ip-10-1-181-252 cluster-autoscaler]$ 

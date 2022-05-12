@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Basic EKS Cluster with Cluster Autoscaler"
-date:   2022-05-12 10:38:08 +0100
+date:   2022-05-11 10:38:08 +0100
 categories: AWS EKS
 ---
 This is based on using a sandbox AWS account <link> 

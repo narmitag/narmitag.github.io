@@ -34,6 +34,8 @@ url: https://www.neilarmitage.com  # the base hostname and protocol for your sit
 theme: minima
 plugins:
   - jekyll-feed
+minima:
+  skin: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default.

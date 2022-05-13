@@ -4,13 +4,11 @@ title:  "Installing Karpenter"
 date:   2022-05-12 08:11:08 +0100
 categories: AWS EKS
 ---
-This at the moment does not work on a sandbox account
 
-The supporting files can be found on [Github]( https://github.com/narmitag/eks/tree/main/karpenter)
+[Karpenter](https://karpenter.sh/) automatically launches just the right compute resources to handle your cluster's applications. It is designed to let you take full advantage of the cloud with fast and simple compute provisioning for Kubernetes clusters. It is a replacement for the Cluster Autoscaler which has some issues in AWS
 
+This at the moment this example does not work on an acloudguru sandbox account. The supporting files can be found on [Github]( https://github.com/narmitag/eks/tree/main/karpenter)
  
-
-
 Deploy an EKS Cluster
 {% highlight bash %}
 export CLUSTER_NAME="karpenter-demo"

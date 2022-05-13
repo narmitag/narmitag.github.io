@@ -4,6 +4,8 @@ title:  "Basic EKS Cluster with Cluster Autoscaler"
 date:   2022-05-11 10:38:08 +0100
 categories: AWS EKS
 ---
+EKSCTL can be used to quickly deploy a AWS EKS Cluster.
+
 This is based on using a sandbox AWS account <link> 
 
 The supporting files can be found on [Github]( https://github.com/narmitag/eks/tree/main/cluster-autoscaler)

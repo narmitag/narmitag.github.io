@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "K8S Object Backup with Velero"
+title:  "Kubernetes  Backup with Velero"
 date:   2022-07-29 10:14:08 +0100
 categories: AWS K8S velero
 ---
 
-velero can being used for backup and recovery - https://velero.io/
+[Velero](https://velero.io/) can being used for backup and recovery - 
 
 # Installation via Terraform
 

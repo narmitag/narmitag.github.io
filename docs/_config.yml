@@ -32,8 +32,7 @@ url: https://www.neilarmitage.com  # the base hostname and protocol for your sit
 show_excerpts: true
 
 # Build settings
-#theme: minima
-remote_theme: benbalter/retlab
+theme: minima
 plugins:
   - jekyll-feed
 minima:

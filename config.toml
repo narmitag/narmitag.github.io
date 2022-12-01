@@ -1,4 +1,4 @@
-baseURL = 'https://neilarmitage.com/'
+baseURL = 'http://neilarmitage.com/'
 languageCode = 'en-us'
 title = 'My Personal Ramblings'
 theme = 'beautifulhugo'

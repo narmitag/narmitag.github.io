@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on My Personal Ramblings</title>
+    <link>http://neilarmitage.com/categories/aws/</link>
+    <description>Recent content in AWS on My Personal Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 May 2022 14:38:08 +0000</lastBuildDate><atom:link href="http://neilarmitage.com/categories/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using ACloudGuru AWS Sandboxes</title>
+      <link>http://neilarmitage.com/posts/2022-05-08-acloudguru-sandbox/</link>
+      <pubDate>Sun, 08 May 2022 14:38:08 +0000</pubDate>
+      
+      <guid>http://neilarmitage.com/posts/2022-05-08-acloudguru-sandbox/</guid>
+      <description>Running your own AWS account for testing can lead to unexpected costs. Unless care is taken around securing the account, the account can be hijacked and used for other purposes. Personally I’ve stopped running my own accounts and moved to using the sandbox accounts provided by acloudguru as part of their Personal Plus subscription.
+Most of the examples provided in the blog should run on these playgrounds with some exceptions. Generally the setup is using the AWS CloudShell within the sandbox account to remove any issue with local machine setups.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+baseURL = 'http://neilarmitage.com/'
+languageCode = 'en-us'
+title = 'My Personal Ramblings'
+theme = 'beautifulhugo'
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+enableGitInfo = true
+[Params]
+  commit = "https://github.com/narmitag/narmitag.github.io/"
+
+[menu]
+[[menu.main]]
+  identifier = 'about'
+  name = 'about'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/about/'
+  weight = -110
+[[menu.main]]
+  identifier = 'talks'
+  name = 'talks'
+  pre = "<i class='fa fa-heart'></i>"
+  url = 'https://speakerdeck.com/neilarmitage'
+  weight = -110
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[Author]
+  # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
+  name = "Neil Armitage"
+  website = "neilarmitage.com"
+  email = "neil@neilarmitage.com"
+  github = "narmitag"
+  twitter = "narmitage"
+  linkedin = "neil-a-5750885"

@@ -1,6 +1,6 @@
 baseURL = 'https://neilarmitage.com/'
 languageCode = 'en-us'
-title = 'My Personal Ramblings'
+title = 'Random Stuff From My Head'
 theme = 'beautifulhugo'
 pygmentsCodeFences = true
 pygmentsUseClasses = true

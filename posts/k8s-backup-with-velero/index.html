@@ -1,0 +1,230 @@
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Kubernetes Backup with Velero - Random Stuff From My Head</title><meta name=description content="Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS cluster and is simple to operate.
+An example deployment including EKS can be cloned from here
+Installation via Terraform resource &#34;aws_s3_bucket&#34; &#34;velero&#34; { bucket = &#34;eks-velero-backup-${var.environment_name}&#34; acl = &#34;private&#34; server_side_encryption_configuration { rule { apply_server_side_encryption_by_default { sse_algorithm = &#34;AES256&#34; } } } versioning { enabled = true } } resource &#34;aws_s3_bucket_policy&#34; &#34;velero&#34; { bucket = aws_s3_bucket."><meta name=author content="Neil Armitage"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Random Stuff From My Head","url":"https:\/\/neilarmitage.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/neilarmitage.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/neilarmitage.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/neilarmitage.com\/posts\/k8s-backup-with-velero\/","name":"Kubernetes backup with velero"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Neil Armitage"},"headline":"Kubernetes  Backup with Velero","description":"Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS cluster and is simple to operate.\nAn example deployment including EKS can be cloned from here\nInstallation via Terraform resource \u0026#34;aws_s3_bucket\u0026#34; \u0026#34;velero\u0026#34; { bucket = \u0026#34;eks-velero-backup-${var.environment_name}\u0026#34; acl = \u0026#34;private\u0026#34; server_side_encryption_configuration { rule { apply_server_side_encryption_by_default { sse_algorithm = \u0026#34;AES256\u0026#34; } } } versioning { enabled = true } } resource \u0026#34;aws_s3_bucket_policy\u0026#34; \u0026#34;velero\u0026#34; { bucket = aws_s3_bucket.","inLanguage":"en","wordCount":1032,"datePublished":"2022-07-29T10:14:08","dateModified":"2022-07-29T10:14:08","image":"https:\/\/neilarmitage.com\/","keywords":["AWS, EKS"],"mainEntityOfPage":"https:\/\/neilarmitage.com\/posts\/k8s-backup-with-velero\/","publisher":{"@type":"Organization","name":"https:\/\/neilarmitage.com\/","logo":{"@type":"ImageObject","url":"https:\/\/neilarmitage.com\/","height":60,"width":60}}}</script><meta property="og:title" content="Kubernetes  Backup with Velero"><meta property="og:description" content="Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS cluster and is simple to operate.
+An example deployment including EKS can be cloned from here
+Installation via Terraform resource &#34;aws_s3_bucket&#34; &#34;velero&#34; { bucket = &#34;eks-velero-backup-${var.environment_name}&#34; acl = &#34;private&#34; server_side_encryption_configuration { rule { apply_server_side_encryption_by_default { sse_algorithm = &#34;AES256&#34; } } } versioning { enabled = true } } resource &#34;aws_s3_bucket_policy&#34; &#34;velero&#34; { bucket = aws_s3_bucket."><meta property="og:url" content="https://neilarmitage.com/posts/k8s-backup-with-velero/"><meta property="og:type" content="website"><meta property="og:site_name" content="Random Stuff From My Head"><meta name=twitter:title content="Kubernetes  Backup with Velero"><meta name=twitter:description content="Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS …"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@narmitage"><meta name=twitter:creator content="@narmitage"><meta name=generator content="Hugo 0.107.0"><link rel=alternate href=https://neilarmitage.com/index.xml type=application/rss+xml title="Random Stuff From My Head"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://neilarmitage.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://neilarmitage.com/css/syntax.css><link rel=stylesheet href=https://neilarmitage.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=https://neilarmitage.com/>Random Stuff From My Head</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=about href=/about/>about</a></li><li><a title=talks href=https://speakerdeck.com/neilarmitage>talks</a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=posts-heading><h1>Kubernetes Backup with Velero</h1><hr class=small></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><p><a href=https://velero.io/>Velero</a> is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS cluster and is simple to operate.</p><p>An example deployment including EKS can be cloned from <a href=https://github.com/narmitag/terraform-examples/tree/main/eks-ca>here</a></p><h3 id=installation-via-terraform>Installation via Terraform</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-terraform data-lang=terraform><span class=line><span class=cl><span class=kr>resource</span> <span class=s2>&#34;aws_s3_bucket&#34;</span> <span class=s2>&#34;velero&#34;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=na>bucket</span> = <span class=s2>&#34;eks-velero-backup-</span><span class=si>${</span><span class=nb>var</span><span class=p>.</span><span class=nx>environment_name</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=na>acl</span>    = <span class=s2>&#34;private&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>server_side_encryption_configuration</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>rule</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>apply_server_side_encryption_by_default</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=na>sse_algorithm</span> = <span class=s2>&#34;AES256&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=nx>versioning</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=na>enabled</span> = <span class=kc>true</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>
+</span></span></span><span class=line><span class=cl><span class=kr>resource</span> <span class=s2>&#34;aws_s3_bucket_policy&#34;</span> <span class=s2>&#34;velero&#34;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=na>bucket</span> = <span class=nx>aws_s3_bucket</span><span class=p>.</span><span class=nx>velero</span><span class=p>.</span><span class=nx>id</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=na>policy</span> =<span class=nb> jsonencode</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>        <span class=na>Version</span> = <span class=s2>&#34;2012-10-17&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>Id</span>      = <span class=s2>&#34;velero-</span><span class=si>${</span><span class=nb>var</span><span class=p>.</span><span class=nx>environment_name</span><span class=si>}</span><span class=s2>-bucket-policy&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>Statement</span> = <span class=p>[</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=na>Sid</span>       = <span class=s2>&#34;EnforceTls&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=na>Effect</span>    = <span class=s2>&#34;Deny&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=na>Principal</span> = <span class=s2>&#34;*&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=na>Action</span>    = <span class=s2>&#34;s3:*&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=na>Resource</span> = <span class=p>[</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;</span><span class=si>${</span><span class=nx>aws_s3_bucket</span><span class=p>.</span><span class=nx>velero</span><span class=p>.</span><span class=nx>arn</span><span class=si>}</span><span class=s2>/*&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;</span><span class=si>${</span><span class=nx>aws_s3_bucket</span><span class=p>.</span><span class=nx>velero</span><span class=p>.</span><span class=nx>arn</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=p>]</span>
+</span></span><span class=line><span class=cl>                <span class=na>Condition</span> = <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=na>Bool</span> = <span class=p>{</span>
+</span></span><span class=line><span class=cl>                        <span class=s2>&#34;aws:SecureTransport&#34;</span> <span class=o>=</span> <span class=s2>&#34;false&#34;</span>
+</span></span><span class=line><span class=cl>                    <span class=p>}</span>
+</span></span><span class=line><span class=cl>                    <span class=na>NumericLessThan</span> = <span class=p>{</span>
+</span></span><span class=line><span class=cl>                        <span class=s2>&#34;s3:TlsVersion&#34;</span><span class=o>:</span> <span class=m>1</span><span class=p>.</span><span class=m>2</span>
+</span></span><span class=line><span class=cl>                    <span class=p>}</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>
+</span></span></span><span class=line><span class=cl><span class=kr>module</span> <span class=s2>&#34;velero&#34;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=na>source</span>  = <span class=s2>&#34;DNXLabs/eks-velero/aws&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=na>version</span> = <span class=s2>&#34;0.1.2&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=na>enabled</span> = <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=na>cluster_name</span>                     = <span class=nb>module</span><span class=p>.</span><span class=nx>eks</span><span class=p>.</span><span class=nx>cluster_id</span>
+</span></span><span class=line><span class=cl>  <span class=na>cluster_identity_oidc_issuer</span>     = <span class=nb>module</span><span class=p>.</span><span class=nx>eks</span><span class=p>.</span><span class=nx>cluster_oidc_issuer_url</span>
+</span></span><span class=line><span class=cl>  <span class=na>cluster_identity_oidc_issuer_arn</span> = <span class=nb>module</span><span class=p>.</span><span class=nx>eks</span><span class=p>.</span><span class=nx>oidc_provider_arn</span>
+</span></span><span class=line><span class=cl>  <span class=na>aws_region</span>                       = <span class=nb>var</span><span class=p>.</span><span class=nx>region</span>
+</span></span><span class=line><span class=cl>  <span class=na>create_bucket</span>                    = <span class=kc>false</span>
+</span></span><span class=line><span class=cl>  <span class=na>bucket_name</span>                      = <span class=s2>&#34;eks-velero-backup-</span><span class=si>${</span><span class=nb>var</span><span class=p>.</span><span class=nx>environment_name</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=na>helm_chart_version</span>               = <span class=s2>&#34;2.30.1&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>When a new namespace is created a daily scheduled backup is included in the namespace</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>velero schedule create <span class=nv>$NAMESPACE</span>-backup --schedule <span class=s2>&#34;0 7 * * *&#34;</span> -n <span class=nv>$NAMESPACE</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> velero schedule get
+</span></span><span class=line><span class=cl>NAME                 STATUS    CREATED                         SCHEDULE    BACKUP TTL   LAST BACKUP   SELECTOR
+</span></span><span class=line><span class=cl>29681-sys-backup     Enabled   2022-07-28 15:31:07 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>backup-demo-backup   Enabled   2022-07-28 08:19:28 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>dev-backup           Enabled   2022-07-28 09:59:44 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>dev-update-backup    Enabled   2022-07-28 09:38:01 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>develop-backup       Enabled   2022-07-28 09:29:47 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>pfs-retry-backup     Enabled   2022-07-28 17:17:55 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>ui-backup            Enabled   2022-07-28 11:14:28 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span>
+</span></span></code></pre></div><h3 id=testing>Testing</h3><p>Backup and recovery of a namespace has been tested with a recovery from S3 and EBS snapshots</p><p>A deployment has been created in backup-demo</p><h4 id=a-schedule-was-created>A schedule was created</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> velero schedule get
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>NAME                 STATUS    CREATED                         SCHEDULE    BACKUP TTL   LAST BACKUP   SELECTOR
+</span></span><span class=line><span class=cl>29681-sys-backup     Enabled   2022-07-28 15:31:07 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>backup-demo-backup   Enabled   2022-07-28 08:19:28 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>dev-backup           Enabled   2022-07-28 09:59:44 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>dev-update-backup    Enabled   2022-07-28 09:38:01 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>develop-backup       Enabled   2022-07-28 09:29:47 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>pfs-retry-backup     Enabled   2022-07-28 17:17:55 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span><span class=line><span class=cl>ui-backup            Enabled   2022-07-28 11:14:28 +0100 BST   <span class=m>0</span> <span class=m>3</span> * * *   0s           6h ago        &lt;none&gt;
+</span></span></code></pre></div><h4 id=a-list-of-backups-available>A list of backups available</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> velero backup get
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>NAME                                  STATUS            ERRORS   WARNINGS   CREATED                         EXPIRES   STORAGE LOCATION   SELECTOR
+</span></span><span class=line><span class=cl>29681-sys-backup-20220729030042       PartiallyFailed   <span class=m>1</span>        <span class=m>0</span>          2022-07-29 04:00:55 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>backup-demo-backup-20220729030042     PartiallyFailed   <span class=m>6</span>        <span class=m>0</span>          2022-07-29 04:01:30 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>backup-demo-schedule-20220729030042   Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-29 04:01:17 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>backup-demo-schedule-20220728030041   Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-28 04:00:41 +0100 BST   28d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>dev-backup-20220729030042             Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-29 04:02:09 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>dev-update-backup-20220729030042      Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-29 04:01:56 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>develop-backup-20220729030042         Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-29 04:01:43 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>pfs-retry-backup-20220729030042       Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-29 04:01:05 +0100 BST   29d       default            &lt;none&gt;
+</span></span><span class=line><span class=cl>ui-backup-20220729030042              Completed         <span class=m>0</span>        <span class=m>0</span>          2022-07-29 04:00:42 +0100 BST   29d       default            &lt;none&gt;
+</span></span></code></pre></div><h4 id=test-namespace-deleted>Test namespace deleted</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> k get ns <span class=p>|</span> grep backup-demo
+</span></span><span class=line><span class=cl>backup-demo              Active   2d18h
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> k delete ns backup-demo
+</span></span><span class=line><span class=cl>namespace <span class=s2>&#34;backup-demo&#34;</span> deleted
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> k get ns <span class=p>|</span> grep backup-demo
+</span></span></code></pre></div><h4 id=backup-restored>Backup restored</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> velero restore create  --from-backup backup-demo-schedule-20220729030042
+</span></span><span class=line><span class=cl>Restore request <span class=s2>&#34;backup-demo-schedule-20220729030042-20220729102625&#34;</span> submitted successfully.
+</span></span><span class=line><span class=cl>Run <span class=sb>`</span>velero restore describe backup-demo-schedule-20220729030042-20220729102625<span class=sb>`</span> or <span class=sb>`</span>velero restore logs backup-demo-schedule-20220729030042-20220729102625<span class=sb>`</span> <span class=k>for</span> more details.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> velero restore describe backup-demo-schedule-20220729030042-20220729102625
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Name:         backup-demo-schedule-20220729030042-20220729102625
+</span></span><span class=line><span class=cl>Namespace:    velero
+</span></span><span class=line><span class=cl>Labels:       &lt;none&gt;
+</span></span><span class=line><span class=cl>Annotations:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Phase:                                 InProgress
+</span></span><span class=line><span class=cl>Estimated total items to be restored:  <span class=m>201</span>
+</span></span><span class=line><span class=cl>Items restored so far:                 <span class=m>11</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Started:    2022-07-29 10:26:27 +0100 BST
+</span></span><span class=line><span class=cl>Completed:  &lt;n/a&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Backup:  backup-demo-schedule-20220729030042
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Namespaces:
+</span></span><span class=line><span class=cl>  Included:  all namespaces found in the backup
+</span></span><span class=line><span class=cl>  Excluded:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Resources:
+</span></span><span class=line><span class=cl>  Included:        *
+</span></span><span class=line><span class=cl>  Excluded:        nodes, events, events.events.k8s.io, backups.velero.io, restores.velero.io, resticrepositories.velero.io
+</span></span><span class=line><span class=cl>  Cluster-scoped:  auto
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Namespace mappings:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Label selector:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Restore PVs:  auto
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Existing Resource Policy:   &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Preserve Service NodePorts:  auto
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span>
+</span></span></code></pre></div><h4 id=backup-restored-1>Backup restored</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> velero restore describe backup-demo-schedule-20220729030042-20220729102625
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Name:         backup-demo-schedule-20220729030042-20220729102625
+</span></span><span class=line><span class=cl>Namespace:    velero
+</span></span><span class=line><span class=cl>Labels:       &lt;none&gt;
+</span></span><span class=line><span class=cl>Annotations:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Phase:                       Completed
+</span></span><span class=line><span class=cl>Total items to be restored:  <span class=m>197</span>
+</span></span><span class=line><span class=cl>Items restored:              <span class=m>197</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Started:    2022-07-29 10:26:27 +0100 BST
+</span></span><span class=line><span class=cl>Completed:  2022-07-29 10:27:03 +0100 BST
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Warnings:
+</span></span><span class=line><span class=cl>  Velero:     &lt;none&gt;
+</span></span><span class=line><span class=cl>  Cluster:  could not restore, CustomResourceDefinition <span class=s2>&#34;certificaterequests.cert-manager.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>            could not restore, CustomResourceDefinition <span class=s2>&#34;certificates.cert-manager.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>            could not restore, CustomResourceDefinition <span class=s2>&#34;ciliumendpoints.cilium.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>            could not restore, CustomResourceDefinition <span class=s2>&#34;ciliumnetworkpolicies.cilium.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>            could not restore, CustomResourceDefinition <span class=s2>&#34;orders.acme.cert-manager.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>            could not restore, CustomResourceDefinition <span class=s2>&#34;schedules.velero.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>            could not restore, CustomResourceDefinition <span class=s2>&#34;secretagentconfigurations.secret-agent.secrets.forgerock.io&#34;</span> already exists. Warning: the in-cluster version is different than the backed-up version.
+</span></span><span class=line><span class=cl>  Namespaces: &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Backup:  backup-demo-schedule-20220729030042
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Namespaces:
+</span></span><span class=line><span class=cl>  Included:  all namespaces found in the backup
+</span></span><span class=line><span class=cl>  Excluded:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Resources:
+</span></span><span class=line><span class=cl>  Included:        *
+</span></span><span class=line><span class=cl>  Excluded:        nodes, events, events.events.k8s.io, backups.velero.io, restores.velero.io, resticrepositories.velero.io
+</span></span><span class=line><span class=cl>  Cluster-scoped:  auto
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Namespace mappings:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Label selector:  &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Restore PVs:  auto
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Existing Resource Policy:   &lt;none&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Preserve Service NodePorts:  auto
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>➜  ~ <span class=o>(</span>⎈ <span class=p>|</span>arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default<span class=o>)</span> k get po -n backup-demo
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>NAME                                  READY   STATUS    RESTARTS   AGE
+</span></span><span class=line><span class=cl>admin-ui-b89f6f748-zf649              2/2     Running   <span class=m>0</span>          58s
+</span></span><span class=line><span class=cl>am-dd47498c5-pbbzh                    1/2     Running   <span class=m>0</span>          58s
+</span></span><span class=line><span class=cl>consent-and-auth-ui-f9486bbc4-vc5q2   3/3     Running   <span class=m>0</span>          58s
+</span></span><span class=line><span class=cl>ds-cts-0                              2/2     Running   <span class=m>0</span>          58s
+</span></span><span class=line><span class=cl>ds-cts-1                              2/2     Running   <span class=m>0</span>          58s
+</span></span><span class=line><span class=cl>ds-cts-2                              2/2     Running   <span class=m>0</span>          57s
+</span></span><span class=line><span class=cl>ds-idrepo-0                           2/2     Running   <span class=m>0</span>          57s
+</span></span><span class=line><span class=cl>ds-idrepo-1                           1/2     Running   <span class=m>0</span>          57s
+</span></span><span class=line><span class=cl>ds-umarepo-0                          2/2     Running   <span class=m>0</span>          57s
+</span></span><span class=line><span class=cl>end-user-ui-759f8bb9d7-pnr72          2/2     Running   <span class=m>0</span>          57s
+</span></span><span class=line><span class=cl>idm-b478d46cb-vvvcf                   1/2     Running   <span class=m>0</span>          57s
+</span></span><span class=line><span class=cl>ig-c4fc95547-tdcxh                    1/2     Running   <span class=m>0</span>          56s
+</span></span><span class=line><span class=cl>login-ui-7c8f994cb6-2rlqm             2/2     Running   <span class=m>0</span>          56s
+</span></span><span class=line><span class=cl>rcs-agent-6f6657cdbb-2tmdb            2/2     Running   <span class=m>0</span>          56s
+</span></span></code></pre></div><div class=blog-tags><a href=https://neilarmitage.com//tags/aws/>AWS</a>&nbsp;
+<a href=https://neilarmitage.com//tags/eks/>EKS</a>&nbsp;</div></article><ul class="pager blog-pager"><li class=previous><a href=https://neilarmitage.com/posts/karpenter/ data-toggle=tooltip data-placement=top title="Installing Karpenter">&larr; Previous Post</a></li><li class=next><a href=https://neilarmitage.com/posts/cloudopen-europe-2022/ data-toggle=tooltip data-placement=top title="Avoiding pain when operating in the Cloud">Next Post &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=mailto:neil@neilarmitage.com title="Email me"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://github.com/narmitag title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/narmitage title=Twitter><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://linkedin.com/in/neil-a-5750885 title=LinkedIn><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="credits copyright text-muted"><a href=neilarmitage.com>Neil Armitage</a>
+&nbsp;&bull;&nbsp;&copy;
+2022
+&nbsp;&bull;&nbsp;
+<a href=https://neilarmitage.com/>Random Stuff From My Head</a></p><p class="credits theme-by text-muted"><a href=https://gohugo.io>Hugo v0.107.0</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a>
+&nbsp;&bull;&nbsp;[<a href=https://github.com/narmitag/narmitag.github.io/d60d4ac1fd0e7602b7f1e28b6da5d971c1964ab7>d60d4ac1</a>]</p></div></div></div></footer><script src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin=anonymous></script>
+<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
+<script src=https://neilarmitage.com/js/main.js></script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://neilarmitage.com/js/load-photoswipe.js></script></body></html>

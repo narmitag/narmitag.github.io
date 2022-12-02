@@ -5,9 +5,12 @@ title: Kubernetes  Backup with Velero
 tags: ['AWS', 'EKS']
 ---
 
-[Velero](https://velero.io/) can being used for backup and recovery - 
 
-# Installation via Terraform
+[Velero](https://velero.io/) is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS cluster and is simple to operate.
+
+An example deployment including EKS can be cloned from [here](https://github.com/narmitag/terraform-examples/tree/main/eks-ca)
+
+### Installation via Terraform
 
 ```terraform
 resource "aws_s3_bucket" "velero" {
@@ -88,13 +91,13 @@ ui-backup            Enabled   2022-07-28 11:14:28 +0100 BST   0 3 * * *   0s   
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default)
 ```
 
-# Testing
+### Testing
 
 Backup and recovery of a namespace has been tested with a recovery from S3 and EBS snapshots
 
 A deployment has been created in backup-demo
 
-## A schedule was created 
+#### A schedule was created 
 ```bash
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default) velero schedule get
 
@@ -110,7 +113,7 @@ ui-backup            Enabled   2022-07-28 11:14:28 +0100 BST   0 3 * * *   0s   
 
 
 ```
-## A list of backups available
+#### A list of backups available
 ```bash
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default) velero backup get
 
@@ -126,7 +129,7 @@ pfs-retry-backup-20220729030042       Completed         0        0          2022
 ui-backup-20220729030042              Completed         0        0          2022-07-29 04:00:42 +0100 BST   29d       default            <none>
 ```
 
-## Test namespace deleted
+#### Test namespace deleted
 
 ```bash
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default) k get ns | grep backup-demo
@@ -139,7 +142,7 @@ namespace "backup-demo" deleted
 
 ```
 
-## Backup restored
+#### Backup restored
 ```bash
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default) velero restore create  --from-backup backup-demo-schedule-20220729030042
 Restore request "backup-demo-schedule-20220729030042-20220729102625" submitted successfully.
@@ -182,7 +185,7 @@ Preserve Service NodePorts:  auto
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default)
 ```
 
-## Backup restored
+#### Backup restored
 
 ```bash
 ➜  ~ (⎈ |arn:aws:eks:eu-west-2:123456789012:cluster/cluster-1:default) velero restore describe backup-demo-schedule-20220729030042-20220729102625

@@ -1,7 +1,8 @@
 ---
 title: "Deploying Nats Jetstream in AWS"
 date: 2022-12-01T12:43:36Z
-draft: true
+draft: false
+tags: ['AWS']
 ---
 ![Image alt](/images/nats-horizontal-color.png) NATS is a connective technology that powers modern distributed systems. A connective technology is responsible for addressing, discovery and exchanging of messages that drive the common patterns in distributed systems; asking and answering questions, aka services/microservices, and making and processing statements, or stream processing.
 

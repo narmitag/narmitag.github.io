@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPN on Random Stuff From My Head</title>
+    <link>https://neilarmitage.com/tags/vpn/</link>
+    <description>Recent content in VPN on Random Stuff From My Head</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
+    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <lastBuildDate>Thu, 01 Dec 2022 12:43:03 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up AWS VPN</title>
+      <link>https://neilarmitage.com/posts/setting_up_aws_vpn/</link>
+      <pubDate>Thu, 01 Dec 2022 12:43:03 +0000</pubDate>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/setting_up_aws_vpn/</guid>
+      <description>This example will deploy a VPN into an AWS VPC and show how to connect to it using OpenVPN from either a Mac or Linux host. It will use Certificates for authentication, many other authentication options are available.
+Terraform source code can be found at Github
+If will deploy a simple VPC in one AZ and then create a VPN, the required certificates for the VPN will be stored in AWS Parameter Store.</description>
+    </item>
+    
+  </channel>
+</rss>

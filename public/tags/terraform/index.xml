@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terraform on Random Stuff From My Head</title>
+    <link>https://neilarmitage.com/tags/terraform/</link>
+    <description>Recent content in terraform on Random Stuff From My Head</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
+    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <lastBuildDate>Fri, 02 Dec 2022 14:59:57 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform Testing</title>
+      <link>https://neilarmitage.com/posts/terraform_testing/</link>
+      <pubDate>Fri, 02 Dec 2022 14:59:57 +0000</pubDate>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/terraform_testing/</guid>
+      <description>For a long time I&amp;rsquo;ve been wanting to look at some way of testing terraform. As part of this I&amp;rsquo;ve recently looked using terratest and localstack.
+While localstack looks promising lots of the things I wanted to test are either in the pro version or not supported so I went back to using live AWS accounts. It would be nice to be able to use localstack in a pipeline, hopefully in the future.</description>
+    </item>
+    
+  </channel>
+</rss>

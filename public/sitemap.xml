@@ -2,48 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://neilarmitage.com/about/</loc>
-    <lastmod>2022-11-30T13:15:51+00:00</lastmod>
+    <loc>https://neilarmitage.com/tags/aws/</loc>
+    <lastmod>2022-12-02T15:12:43+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/2022-09-14-cloudopen-europe-2022/</loc>
-    <lastmod>2022-09-14T06:30:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/posts/</loc>
+    <lastmod>2022-12-02T15:12:43+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/categories/</loc>
-    <lastmod>2022-09-14T06:30:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/</loc>
+    <lastmod>2022-12-02T15:12:43+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/categories/cloudopen-talks/</loc>
-    <lastmod>2022-09-14T06:30:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/tags/</loc>
+    <lastmod>2022-12-02T15:12:43+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/</loc>
-    <lastmod>2022-09-14T06:30:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/tags/terraform/</loc>
+    <lastmod>2022-12-02T15:12:43+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/</loc>
-    <lastmod>2022-09-14T06:30:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/posts/terraform_testing/</loc>
+    <lastmod>2022-12-02T15:12:43+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/categories/aws-k8s-velero/</loc>
-    <lastmod>2022-07-29T10:14:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/posts/aws_transit_gateway_with_terraform/</loc>
+    <lastmod>2022-12-02T14:21:27+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/2022-07-29-k8s-backup-with-velero/</loc>
-    <lastmod>2022-07-29T10:14:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/tags/transit-gateway/</loc>
+    <lastmod>2022-12-02T14:21:27+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/categories/aws-eks/</loc>
-    <lastmod>2022-05-12T08:11:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/posts/nats_jetstream_in_aws/</loc>
+    <lastmod>2022-12-02T14:27:27+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/2022-05-12-karpenter/</loc>
-    <lastmod>2022-05-12T08:11:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/posts/setting_up_aws_vpn/</loc>
+    <lastmod>2022-12-02T10:45:23+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/2022-05-11-basic-eks-cluster/</loc>
-    <lastmod>2022-05-11T10:38:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/tags/vpn/</loc>
+    <lastmod>2022-12-02T10:45:23+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/2022-05-11-cilium-chaining/</loc>
-    <lastmod>2022-05-11T10:38:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/about/</loc>
+    <lastmod>2022-12-01T09:35:52+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/categories/aws/</loc>
-    <lastmod>2022-05-08T14:38:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/posts/cloudopen-europe-2022/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/posts/2022-05-08-acloudguru-sandbox/</loc>
-    <lastmod>2022-05-08T14:38:08+00:00</lastmod>
+    <loc>https://neilarmitage.com/categories/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
   </url><url>
-    <loc>http://neilarmitage.com/tags/</loc>
+    <loc>https://neilarmitage.com/categories/cloudopen-talks/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/tags/talks/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/categories/aws-k8s-velero/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/tags/eks/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/posts/k8s-backup-with-velero/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/categories/aws-eks/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/posts/karpenter/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/posts/basic-eks-cluster/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/posts/cilium-chaining/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/categories/aws/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
+  </url><url>
+    <loc>https://neilarmitage.com/posts/acloudguru-sandbox/</loc>
+    <lastmod>2022-12-02T15:11:10+00:00</lastmod>
   </url>
 </urlset>

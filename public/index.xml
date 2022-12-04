@@ -1,58 +1,104 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Personal Ramblings</title>
-    <link>http://neilarmitage.com/</link>
-    <description>Recent content on My Personal Ramblings</description>
+    <title>Random Stuff From My Head</title>
+    <link>https://neilarmitage.com/</link>
+    <description>Recent content on Random Stuff From My Head</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Sep 2022 06:30:08 +0000</lastBuildDate><atom:link href="http://neilarmitage.com/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
+    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <lastBuildDate>Fri, 02 Dec 2022 14:59:57 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform Testing</title>
+      <link>https://neilarmitage.com/posts/terraform_testing/</link>
+      <pubDate>Fri, 02 Dec 2022 14:59:57 +0000</pubDate>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/terraform_testing/</guid>
+      <description>For a long time I&amp;rsquo;ve been wanting to look at some way of testing terraform. As part of this I&amp;rsquo;ve recently looked using terratest and localstack.
+While localstack looks promising lots of the things I wanted to test are either in the pro version or not supported so I went back to using live AWS accounts. It would be nice to be able to use localstack in a pipeline, hopefully in the future.</description>
+    </item>
+    
+    <item>
+      <title>Setting up AWS Transit Gateway with Terraform</title>
+      <link>https://neilarmitage.com/posts/aws_transit_gateway_with_terraform/</link>
+      <pubDate>Fri, 02 Dec 2022 12:44:02 +0000</pubDate>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/aws_transit_gateway_with_terraform/</guid>
+      <description>Transit Gateway allows VPC&amp;rsquo;s to be connected together into a single network as well as connecting to on-prem networks.
+This example will deploy a simple setup with 2 VPC&amp;rsquo;s being connected together.
+The Terraform code can be found on GitHub. The code also includes a RAM (Resource Access Manager) share for linking VPC&amp;rsquo;s in separate accounts but in this examples it&amp;rsquo;s not used.
+Just update any the reqruired settings in variables.</description>
+    </item>
+    
+    <item>
+      <title>Deploying Nats Jetstream in AWS</title>
+      <link>https://neilarmitage.com/posts/nats_jetstream_in_aws/</link>
+      <pubDate>Thu, 01 Dec 2022 12:43:36 +0000</pubDate>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/nats_jetstream_in_aws/</guid>
+      <description>NATS is a connective technology that powers modern distributed systems. A connective technology is responsible for addressing, discovery and exchanging of messages that drive the common patterns in distributed systems; asking and answering questions, aka services/microservices, and making and processing statements, or stream processing.
+An example installation using Terraform can be found on GitHub, this deploys a VPC and the supporting infrastructure required along with a AWS instance running Ubuntu with NAT&amp;rsquo;s installed.</description>
+    </item>
+    
+    <item>
+      <title>Setting up AWS VPN</title>
+      <link>https://neilarmitage.com/posts/setting_up_aws_vpn/</link>
+      <pubDate>Thu, 01 Dec 2022 12:43:03 +0000</pubDate>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/setting_up_aws_vpn/</guid>
+      <description>This example will deploy a VPN into an AWS VPC and show how to connect to it using OpenVPN from either a Mac or Linux host. It will use Certificates for authentication, many other authentication options are available.
+Terraform source code can be found at Github
+If will deploy a simple VPC in one AZ and then create a VPN, the required certificates for the VPN will be stored in AWS Parameter Store.</description>
+    </item>
+    
     <item>
       <title>About</title>
-      <link>http://neilarmitage.com/about/</link>
+      <link>https://neilarmitage.com/about/</link>
       <pubDate>Wed, 30 Nov 2022 13:15:51 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/about/</guid>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/about/</guid>
       <description>My main aim for this site is to write simple HOWTO blogs about cloud based things. I&amp;rsquo;ve become increasing annoyed with either video blogs or over complex blogs where the author is trying to show how clever they are.
 I don&amp;rsquo;t claim to be an expert in anything, I&amp;rsquo;ve been around long enough to know anyone claiming to be an expert in any cloud technology is probably lying to themselves.</description>
     </item>
     
     <item>
       <title>Avoiding pain when operating in the Cloud</title>
-      <link>http://neilarmitage.com/posts/2022-09-14-cloudopen-europe-2022/</link>
+      <link>https://neilarmitage.com/posts/cloudopen-europe-2022/</link>
       <pubDate>Wed, 14 Sep 2022 06:30:08 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/posts/2022-09-14-cloudopen-europe-2022/</guid>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/cloudopen-europe-2022/</guid>
       <description>I will be Speaking at the Open Source Summit Europe 2022 in Dublin
 The slides can be found on SpeakerDeck.</description>
     </item>
     
     <item>
       <title>Kubernetes  Backup with Velero</title>
-      <link>http://neilarmitage.com/posts/2022-07-29-k8s-backup-with-velero/</link>
+      <link>https://neilarmitage.com/posts/k8s-backup-with-velero/</link>
       <pubDate>Fri, 29 Jul 2022 10:14:08 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/posts/2022-07-29-k8s-backup-with-velero/</guid>
-      <description>Velero can being used for backup and recovery -
-Installation via Terraform resource &amp;#34;aws_s3_bucket&amp;#34; &amp;#34;velero&amp;#34; { bucket = &amp;#34;eks-velero-backup-${var.environment_name}&amp;#34; acl = &amp;#34;private&amp;#34; server_side_encryption_configuration { rule { apply_server_side_encryption_by_default { sse_algorithm = &amp;#34;AES256&amp;#34; } } } versioning { enabled = true } } resource &amp;#34;aws_s3_bucket_policy&amp;#34; &amp;#34;velero&amp;#34; { bucket = aws_s3_bucket.velero.id policy = jsonencode({ Version = &amp;#34;2012-10-17&amp;#34; Id = &amp;#34;velero-${var.environment_name}-bucket-policy&amp;#34; Statement = [ { Sid = &amp;#34;EnforceTls&amp;#34; Effect = &amp;#34;Deny&amp;#34; Principal = &amp;#34;*&amp;#34; Action = &amp;#34;s3:*&amp;#34; Resource = [ &amp;#34;${aws_s3_bucket.</description>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/k8s-backup-with-velero/</guid>
+      <description>Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It can be setup quickly with Terraform on a EKS cluster and is simple to operate.
+An example deployment including EKS can be cloned from here
+Installation via Terraform resource &amp;#34;aws_s3_bucket&amp;#34; &amp;#34;velero&amp;#34; { bucket = &amp;#34;eks-velero-backup-${var.environment_name}&amp;#34; acl = &amp;#34;private&amp;#34; server_side_encryption_configuration { rule { apply_server_side_encryption_by_default { sse_algorithm = &amp;#34;AES256&amp;#34; } } } versioning { enabled = true } } resource &amp;#34;aws_s3_bucket_policy&amp;#34; &amp;#34;velero&amp;#34; { bucket = aws_s3_bucket.</description>
     </item>
     
     <item>
       <title>Installing Karpenter</title>
-      <link>http://neilarmitage.com/posts/2022-05-12-karpenter/</link>
+      <link>https://neilarmitage.com/posts/karpenter/</link>
       <pubDate>Thu, 12 May 2022 08:11:08 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/posts/2022-05-12-karpenter/</guid>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/karpenter/</guid>
       <description>Karpenter automatically launches just the right compute resources to handle your cluster&amp;rsquo;s applications. It is designed to let you take full advantage of the cloud with fast and simple compute provisioning for Kubernetes clusters. It is a replacement for the Cluster Autoscaler which has some issues in AWS
 This at the moment this example does not work on an acloudguru sandbox account. The supporting files can be found on Github</description>
     </item>
     
     <item>
       <title>Basic EKS Cluster with Cluster Autoscaler</title>
-      <link>http://neilarmitage.com/posts/2022-05-11-basic-eks-cluster/</link>
+      <link>https://neilarmitage.com/posts/basic-eks-cluster/</link>
       <pubDate>Wed, 11 May 2022 10:38:08 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/posts/2022-05-11-basic-eks-cluster/</guid>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/basic-eks-cluster/</guid>
       <description>EKSCTL can be used to quickly deploy a AWS EKS Cluster.
 This is based on using a sandbox AWS account The supporting files can be found on Github
 Create an EKS deployment file, I tend to create individual nodegroups dedicated to a single AZ
@@ -61,22 +107,22 @@ Create an EKS deployment file, I tend to create individual nodegroups dedicated 
     
     <item>
       <title>EKS with Cilium in chaining mode</title>
-      <link>http://neilarmitage.com/posts/2022-05-11-cilium-chaining/</link>
+      <link>https://neilarmitage.com/posts/cilium-chaining/</link>
       <pubDate>Wed, 11 May 2022 10:38:08 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/posts/2022-05-11-cilium-chaining/</guid>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/cilium-chaining/</guid>
       <description>Cilium can run in chaining mode which allows it to run alongside the AWS-CNI plugin.
 This is based on using a sandbox AWS account The supporting files can be found on Github
-Install some extra tools curl -L --remote-name-all https://github.com/cilium/cilium-cli/releases/latest/download/cilium-linux-amd64.tar.gz{,.sha256sum} sha256sum --check cilium-linux-amd64.tar.gz.sha256sum sudo tar xzvfC cilium-linux-amd64.tar.gz /usr/local/bin rm cilium-linux-amd64.tar.gz{,.sha256sum} export HUBBLE_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/hubble/master/stable.txt) curl -L --remote-name-all https://github.com/cilium/hubble/releases/download/$HUBBLE_VERSION/hubble-linux-amd64.tar.gz{,.sha256sum} sha256sum --check hubble-linux-amd64.tar.gz.sha256sum sudo tar xzvfC hubble-linux-amd64.tar.gz /usr/local/bin rm hubble-linux-amd64.tar.gz{,.sha256sum}
-Deploy an EKS Cluster</description>
+Install some extra tools
+curl -L --remote-name-all https://github.com/cilium/cilium-cli/releases/latest/download/cilium-linux-amd64.tar.gz{,.sha256sum} sha256sum --check cilium-linux-amd64.tar.gz.sha256sum sudo tar xzvfC cilium-linux-amd64.tar.gz /usr/local/bin rm cilium-linux-amd64.tar.gz{,.sha256sum} export HUBBLE_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/hubble/master/stable.txt) curl -L --remote-name-all https://github.com/cilium/hubble/releases/download/$HUBBLE_VERSION/hubble-linux-amd64.tar.gz{,.sha256sum} sha256sum --check hubble-linux-amd64.tar.gz.sha256sum sudo tar xzvfC hubble-linux-amd64.tar.gz /usr/local/bin rm hubble-linux-amd64.tar.gz{,.sha256sum} Deploy an EKS Cluster</description>
     </item>
     
     <item>
       <title>Using ACloudGuru AWS Sandboxes</title>
-      <link>http://neilarmitage.com/posts/2022-05-08-acloudguru-sandbox/</link>
+      <link>https://neilarmitage.com/posts/acloudguru-sandbox/</link>
       <pubDate>Sun, 08 May 2022 14:38:08 +0000</pubDate>
-      
-      <guid>http://neilarmitage.com/posts/2022-05-08-acloudguru-sandbox/</guid>
+      <author>neil@neilarmitage.com (Neil Armitage)</author>
+      <guid>https://neilarmitage.com/posts/acloudguru-sandbox/</guid>
       <description>Running your own AWS account for testing can lead to unexpected costs. Unless care is taken around securing the account, the account can be hijacked and used for other purposes. Personally I’ve stopped running my own accounts and moved to using the sandbox accounts provided by acloudguru as part of their Personal Plus subscription.
 Most of the examples provided in the blog should run on these playgrounds with some exceptions. Generally the setup is using the AWS CloudShell within the sandbox account to remove any issue with local machine setups.</description>
     </item>

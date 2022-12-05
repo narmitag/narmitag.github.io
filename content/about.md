@@ -13,3 +13,5 @@ I have been kicking around in IT for over 35 years now in various companies and 
 All views are my own and unrelated to any employer past, present or future.
 
 Some of my slidedecks can now be found on [speakdeck](https://speakerdeck.com/neilarmitage)
+
+Some of the images have been created using [excalidraw](https://excalidraw.com/)

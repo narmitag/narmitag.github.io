@@ -4,6 +4,8 @@ title = 'Random Stuff From My Head'
 theme = 'beautifulhugo'
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "trac"
 
 enableGitInfo = true
 [Params]
@@ -35,3 +37,5 @@ enableGitInfo = true
   github = "narmitag"
   twitter = "narmitage"
   linkedin = "neil-a-5750885"
+
+

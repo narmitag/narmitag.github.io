@@ -87,6 +87,8 @@ aws ssm start-session --target "${INSTANCE_ID}" --region "${REGION}"
 
 The instance can also be used for Port forwarding, this is a bit hacky but works. This will allow connection from your local machine to a remote host via the bastion.
 
+![Image alt](/images/port_forward.png)
+
 Step 1: Start an SSH session to the bastion and run
 
 ```
@@ -100,4 +102,4 @@ Step 2: On your local machine start a port forwarding SSM Session
          --parameters '{"portNumber":["4222"],"localPortNumber":["9999"]}'
  ```
 
-Step 3: Connect to port 999 locally which will forward via the Bastion to port 4333 on 10.200.36.194
+Step 3: Connect to port 9999 locally which will forward via the Bastion to port 4333 on 10.200.36.194

@@ -1,6 +1,6 @@
 baseURL = 'https://neilarmitage.com/'
 languageCode = 'en-us'
-title = 'Random Stuff From My Head'
+title = 'ideas'
 theme = 'beautifulhugo'
 pygmentsCodeFences = true
 pygmentsUseClasses = true
@@ -10,6 +10,19 @@ pygmentsStyle = "trac"
 enableGitInfo = true
 [Params]
   commit = "https://github.com/narmitag/narmitag.github.io/"
+  subtitle = "Random ideas from my head"
+  mainSections = ["post","posts"]
+  #logo = "img/avatar-icon.png" # Expecting square dimensions
+  #favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = false
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
 
 [menu]
 [[menu.main]]

@@ -73,3 +73,31 @@ module "vpc_endpoints" {
 
 }
 ```
+
+The instance deployed is just a standard AWS AL2 instance with the IAM manged role ```arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore``` attached to it via an instance profile.
+
+The Terraform example here includes things like logging and KMS encryption which could be removed. All the command run on the bastion are recorded in Cloudwatch logs along with the name of the IAM user who ran them.
+
+ 
+To connect to the host there is a bash script in ```client\ssh_terminal``` which will locate the bastion in AWS and start a session to it. Basically it is running the command
+
+```bash
+aws ssm start-session --target "${INSTANCE_ID}" --region "${REGION}"
+```
+
+The instance can also be used for Port forwarding, this is a bit hacky but works. This will allow connection from your local machine to a remote host via the bastion.
+
+Step 1: Start an SSH session to the bastion and run
+
+```
+socat TCP-LISTEN:4222,reuseaddr,fork TCP4:10.200.36.194:4222
+```
+
+Step 2: On your local machine start a port forwarding SSM Session
+```
+ aws ssm start-session --target "${INSTANCE_ID}" \
+         --document-name AWS-StartPortForwardingSession \
+         --parameters '{"portNumber":["4222"],"localPortNumber":["9999"]}'
+ ```
+
+Step 3: Connect to port 999 locally which will forward via the Bastion to port 4333 on 10.200.36.194

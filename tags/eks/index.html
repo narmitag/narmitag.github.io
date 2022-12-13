@@ -15,10 +15,11 @@ An example deployment including EKS can be cloned from here
 Installation via Terraform resource "aws_s3_bucket" "velero" { bucket = "eks-velero-backup-${var.environment_name}" acl = "private" server_side_encryption_configuration { rule { apply_server_side_encryption_by_default { sse_algorithm = "AES256" } } } versioning { enabled = true } } resource "aws_s3_bucket_policy" "velero" { bucket = aws_s3_bucket.
 <a href=https://neilarmitage.com/posts/k8s-backup-with-velero/ class=post-read-more>[Read More]</a></div><div class=blog-tags><a href=https://neilarmitage.com//tags/aws/>AWS</a>&nbsp;
 <a href=https://neilarmitage.com//tags/eks/>EKS</a>&nbsp;</div></article><article class=post-preview><a href=https://neilarmitage.com/posts/karpenter/><h2 class=post-title>Installing Karpenter</h2></a><p class=post-meta><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;Posted on May 12, 2022
-&nbsp;(Last modified on December 2, 2022)
+&nbsp;(Last modified on December 13, 2022)
 &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
 &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Neil Armitage</span></p><div class=post-entry>Karpenter automatically launches just the right compute resources to handle your cluster&rsquo;s applications. It is designed to let you take full advantage of the cloud with fast and simple compute provisioning for Kubernetes clusters. It is a replacement for the Cluster Autoscaler which has some issues in AWS
-This at the moment this example does not work on an acloudguru sandbox account. The supporting files can be found on Github
+Updated - 13/12/2022 : The installation is now easier with the new Terraform module - see here for an example
+This at the moment this example does not work on an acloudguru sandbox account.
 <a href=https://neilarmitage.com/posts/karpenter/ class=post-read-more>[Read More]</a></div><div class=blog-tags><a href=https://neilarmitage.com//tags/aws/>AWS</a>&nbsp;
 <a href=https://neilarmitage.com//tags/eks/>EKS</a>&nbsp;</div></article><article class=post-preview><a href=https://neilarmitage.com/posts/basic-eks-cluster/><h2 class=post-title>Basic EKS Cluster with Cluster Autoscaler</h2></a><p class=post-meta><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;Posted on May 11, 2022
 &nbsp;(Last modified on December 2, 2022)

@@ -7,7 +7,7 @@ tags: ['kubernetes','AWS','ACK']
 
 I struggled to find a working (and simple) example on using ACK so I put this together to create an S3 bucket.
 
-AWS Controllers for Kubernetes (also known as ACK) are built around the Kubernetes extension concepts of Custom Resource and Custom Resource Definitions. You can use ACK to define and use AWS services directly from Kubernetes. This helps you take advantage of managed AWS services for your Kubernetes applications without needing to define resources outside of the cluster.
+[AWS Controllers for Kubernetes](https://aws-controllers-k8s.github.io/community/) (also known as ACK) are built around the Kubernetes extension concepts of Custom Resource and Custom Resource Definitions. You can use ACK to define and use AWS services directly from Kubernetes. This helps you take advantage of managed AWS services for your Kubernetes applications without needing to define resources outside of the cluster.
 
 Say you need to use a AWS S3 Bucket in your application that’s deployed to Kubernetes. Instead of using AWS console, AWS CLI, AWS CloudFormation etc., you can define the AWS S3 Bucket in a YAML manifest file and deploy it using familiar tools such as kubectl. The end goal is to allow users (Software Engineers, DevOps engineers, operators etc.) to use the same interface (Kubernetes API in this case) to describe and manage AWS services along with native Kubernetes resources such as Deployment, Service etc.
 

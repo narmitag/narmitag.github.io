@@ -13,8 +13,7 @@ The following instructions assume you are running as ```root```
 ```bash
 
 mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \ 
-        sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 echo \
   "deb [arch=$(dpkg --print-architecture) \

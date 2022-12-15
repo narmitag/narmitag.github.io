@@ -14,7 +14,7 @@ Say you need to use a AWS S3 Bucket in your application that’s deployed to Kub
 ![Image alt](/images/ack.png)
 
 
-**Deploy a text cluster with EKS**
+**Deploy a test cluster with EKS**
 
 ```bash
 

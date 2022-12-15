@@ -11,7 +11,7 @@ AWS Controllers for Kubernetes (also known as ACK) are built around the Kubernet
 
 Say you need to use a AWS S3 Bucket in your application that’s deployed to Kubernetes. Instead of using AWS console, AWS CLI, AWS CloudFormation etc., you can define the AWS S3 Bucket in a YAML manifest file and deploy it using familiar tools such as kubectl. The end goal is to allow users (Software Engineers, DevOps engineers, operators etc.) to use the same interface (Kubernetes API in this case) to describe and manage AWS services along with native Kubernetes resources such as Deployment, Service etc.
 
-
+![Image alt](/images/ack.png)
 
 
 **Deploy a text cluster with EKS**

@@ -7,6 +7,13 @@ tags: ['AWS', 'EKS']
 
 [Karpenter](https://karpenter.sh/) automatically launches just the right compute resources to handle your cluster's applications. It is designed to let you take full advantage of the cloud with fast and simple compute provisioning for Kubernetes clusters. It is a replacement for the Cluster Autoscaler which has some issues in AWS
 
+ 
+
+> Updated - 13/12/2022 :  The installation is now easier with the new Terraform module - see [here](https://github.com/narmitag/terraform-examples/tree/main/eks-karpenter) for an example
+
+
+ 
+
 This at the moment this example does not work on an acloudguru sandbox account. The supporting files can be found on [Github]( https://github.com/narmitag/eks/tree/main/karpenter)
  
 Deploy an EKS Cluster

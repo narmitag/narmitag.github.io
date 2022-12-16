@@ -1,0 +1,2 @@
+## Welcome
+The website is basically a way of me maintaining some notes and hopefully sharing that information. It's a site build with [hugo](https://gohugo.io/) and hosted on [GitHub Pages](https://pages.github.com/). The content is not all my own but collated from various sources.

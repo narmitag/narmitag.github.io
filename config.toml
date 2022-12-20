@@ -50,5 +50,6 @@ enableGitInfo = true
   github = "narmitag"
   twitter = "narmitage"
   linkedin = "neil-a-5750885"
+  mastodon = "https://mastodon.cloud/@neilarmitage"
 
 

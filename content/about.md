@@ -1,8 +1,9 @@
----
-title: "About"
-date: 2022-11-30T13:15:51Z
-draft: false
----
++++
+title = "About"
+date = "2019-02-28"
+aliases = ["about-us", "about-hugo", "contact"]
+author = "Hugo Authors"
++++
 
 My main aim for this site is to write simple HOWTO blogs about cloud based things. I've become increasing annoyed with either video blogs or over complex blogs where the author is trying to show how clever they are.
 

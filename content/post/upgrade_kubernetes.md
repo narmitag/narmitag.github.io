@@ -5,9 +5,9 @@ draft: false
 tags: ['kubernetes']
 ---
 
-The following will update the 3 node cluster build [here]({{< ref "/posts/basic_kubernetes_cluster" >}}) to 1.26. 
+The following will update the 3 node cluster build [here]({{< ref "/post/basic_kubernetes_cluster" >}}) to 1.26. 
 
-Before installing 1.26 the hosts need to be running containerd > 1.6, the Ubuntu 20.04 hosts can be upgraded using the instructions [here]({{< ref "/posts/upgrade_containerd" >}})
+Before installing 1.26 the hosts need to be running containerd > 1.6, the Ubuntu 20.04 hosts can be upgraded using the instructions [here]({{< ref "/post/upgrade_containerd" >}})
 
 ### Upgrading the Master node
 

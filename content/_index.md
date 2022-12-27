@@ -1,2 +1,5 @@
-## Welcome
-The website is basically a way of me maintaining some notes and hopefully sharing that information. It's a site build with [hugo](https://gohugo.io/) and hosted on [GitHub Pages](https://pages.github.com/). The content is not all my own but collated from various sources.
++++
+author = "Hugo Authors"
+description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # Set your site's meta tag (SEO) description here. This overrides any description set in your site configuration.
+keywords = ["design", "clarity", "hugo theme"] # Set your site's meta tag (SEO) keywords here. These override any keywords set in your site configuration.
++++

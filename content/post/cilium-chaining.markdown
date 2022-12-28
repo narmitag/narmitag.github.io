@@ -3,6 +3,7 @@ categories: AWS EKS
 date: "2022-05-11T10:38:08Z"
 title: EKS with Cilium in chaining mode
 tags: ['AWS', 'EKS']
+categories: ['Guides']
 ---
 [Cilium](https://cilium.io/) can run in chaining mode which allows it to run alongside the AWS-CNI plugin.
 

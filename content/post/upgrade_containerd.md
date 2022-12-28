@@ -3,6 +3,7 @@ title: "Upgrade Containerd on Ubuntu 20.04"
 date: 2022-12-12T13:05:14Z
 draft: false
 tags: ['kubernetes']
+categories: ['Guides']
 ---
 
 

@@ -3,6 +3,7 @@ title: "Terraform Testing"
 date: 2022-12-02T14:59:57Z
 draft: false
 tags: ['AWS', 'terraform']
+categories: ['Info']
 ---
 
 For a long time I've been wanting to look at some way of testing terraform. As part of this I've recently looked using [terratest](https://terratest.gruntwork.io/) and [localstack](https://localstack.cloud/).

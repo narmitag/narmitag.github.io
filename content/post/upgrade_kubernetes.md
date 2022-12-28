@@ -3,6 +3,7 @@ title: "Upgrade Kubernetes to 1.26"
 date: 2022-12-12T13:05:25Z
 draft: false
 tags: ['kubernetes']
+categories: ['Guides']
 ---
 
 The following will update the 3 node cluster build [here]({{< ref "/post/basic_kubernetes_cluster" >}}) to 1.26. 

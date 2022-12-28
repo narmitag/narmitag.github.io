@@ -3,6 +3,7 @@ title: "AWS controllers for Kubernetes"
 date: 2022-12-15T11:32:37Z
 draft: false
 tags: ['kubernetes','AWS','ACK']
+categories: ['Examples']
 ---
 
 I struggled to find a working (and simple) example on using ACK so I put this together to create an S3 bucket.

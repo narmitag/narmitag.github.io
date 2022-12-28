@@ -3,6 +3,7 @@ title: "Setting up AWS VPN"
 date: 2022-12-01T12:43:03Z
 draft: false
 tags: ['AWS', 'VPN']
+categories: ['Guides']
 ---
 
 This example will deploy a [VPN](https://aws.amazon.com/vpn/) into an AWS VPC and show how to connect to it using OpenVPN from either a Mac or Linux host. It will use 

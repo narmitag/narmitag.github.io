@@ -3,6 +3,7 @@ title: "SSM Bastion with no NAT Gateway"
 date: 2022-12-05T08:43:21Z
 draft: false
 tags: ['AWS']
+categories: ['Guides']
 ---
 
 Using Systems Manager (SSM) to control access to a Bastion host has several advantages making using a Traditional Bastion host using SSH Keys pretty much obsolete.

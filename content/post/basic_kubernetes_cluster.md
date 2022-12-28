@@ -3,6 +3,7 @@ title: "Building a basic kubernetes cluster with kubeadm"
 date: 2022-12-09T14:07:31Z
 draft: false 
 tags: ['kubernetes']
+categories: ['Guides']
 ---
 
 ![Image alt](/images/k8s-3node.png)

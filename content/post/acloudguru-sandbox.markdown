@@ -2,6 +2,7 @@
 categories: AWS
 date: "2022-05-08T14:38:08Z"
 title: Using ACloudGuru AWS Sandboxes
+categories: ['Info']
 ---
 Running your own AWS account for testing can lead to unexpected costs. Unless care is taken around securing the account, the account can be hijacked and used for other purposes. Personally I’ve stopped running my own accounts and moved to using the [sandbox accounts](https://acloudguru.com/platform/cloud-sandbox-playgrounds) provided by acloudguru as part of their Personal Plus subscription.
 

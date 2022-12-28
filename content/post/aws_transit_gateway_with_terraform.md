@@ -3,6 +3,7 @@ title: "Setting up AWS Transit Gateway with Terraform"
 date: 2022-12-02T12:44:02Z
 draft: false
 tags: ['AWS', 'Transit Gateway']
+categories: ['Guides']
 ---
 
 [Transit Gateway](https://aws.amazon.com/transit-gateway/) allows VPC's to be connected together into a single network as well as connecting to on-prem networks.

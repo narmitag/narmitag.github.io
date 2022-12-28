@@ -3,6 +3,7 @@ categories: AWS EKS
 date: "2022-05-11T10:38:08Z"
 title: Basic EKS Cluster with Cluster Autoscaler
 tags: ['AWS', 'EKS']
+categories: ['Guides']
 ---
 EKSCTL can be used to quickly deploy a AWS EKS Cluster.
 

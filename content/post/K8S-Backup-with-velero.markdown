@@ -3,6 +3,7 @@ categories: AWS K8S velero
 date: "2022-07-29T10:14:08Z"
 title: Kubernetes  Backup with Velero
 tags: ['AWS', 'EKS']
+categories: ['Guides']
 ---
 
 

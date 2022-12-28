@@ -3,6 +3,7 @@ categories: AWS EKS
 date: "2022-05-12T08:11:08Z"
 title: Installing Karpenter
 tags: ['AWS', 'EKS']
+categories: ['Guides']
 ---
 
 [Karpenter](https://karpenter.sh/) automatically launches just the right compute resources to handle your cluster's applications. It is designed to let you take full advantage of the cloud with fast and simple compute provisioning for Kubernetes clusters. It is a replacement for the Cluster Autoscaler which has some issues in AWS

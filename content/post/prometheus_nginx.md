@@ -150,4 +150,3 @@ and restart Prometheus ```sudo systemctl restart prometheus```
 
 The NGINX metrics should now start to appear in Prometheus
 
-![NGINX exporter](/images/prom/nginx_status.png)

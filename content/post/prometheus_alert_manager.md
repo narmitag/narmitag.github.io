@@ -196,3 +196,46 @@ and then restart Prometheus ```sudo  systemctl restart prometheus```
 The new alertmanager should now show up under the status tab in Prometheus
 
 ![Alert Manager](/images/prom/alert_status2.png)
+
+# Writing Alerts
+
+First of all edit ```sudo vi /etc/prometheus/prometheus.yml``` and update the rules_files option to add a rules directory, this will allow us to create multiple files in this directory without having to further update the config.
+
+
+
+```yaml
+rule_files:
+- "/etc/prometheus/rules/*.yml"
+```
+
+Create the rules file directory
+
+```bash
+sudo mkdir /etc/prometheus/rules/
+sudo chown prometheus:prometheus /etc/prometheus/rules/
+```
+
+Now we can create a test rule ```sudo vi /etc/prometheus/rules/test.yml```
+
+```yaml
+groups:
+- name: test-server
+  rules:
+  - alert: TestServerDown
+    expr: up{job="test server"}==0
+    labels:
+      severity: critical
+    annotations:
+      summary: Test Server Down
+```
+
+Now restart Prometheus to pick up the change ```sudo systemctl restart prometheus```
+
+The Alert should now show on the UI as Inactive
+
+![Alert Inactive](/images/prom/alert_ok.png)
+
+If you stop the node_exporter on the test server ```sudo systemctl stop node_exporter``` and wait a minute the alert should show as active
+
+
+![Alert Active](/images/prom/alert_down.png)

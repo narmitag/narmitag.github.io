@@ -64,7 +64,9 @@ Deleting cluster "kind" ...
 ```
 
 
-More complex configurations can be defined via a yaml file e.g. A control plane node and 3 workers
+More complex configurations can be defined via a yaml file 
+
+## A control plane node and 3 workers
 
 ```yaml
 kind: Cluster
@@ -100,4 +102,10 @@ kind-control-plane   Ready    control-plane   33s   v1.25.3
 kind-worker          Ready    <none>          13s   v1.25.3
 kind-worker2         Ready    <none>          13s   v1.25.3
 kind-worker3         Ready    <none>          13s   v1.25.3
+```
+
+## A specific Kubernetes version
+
+```bash
+kind create cluster --image"kindest/node:v1.24.1"
 ```

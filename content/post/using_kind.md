@@ -64,7 +64,7 @@ Deleting cluster "kind" ...
 ```
 
 
-More complex configurations can be defined via a yaml file 
+More complex configurations can be defined via a yaml file. Full details on the options can be found [here](https://kind.sigs.k8s.io/docs/user/configuration/)
 
 ## A control plane node and 3 workers
 

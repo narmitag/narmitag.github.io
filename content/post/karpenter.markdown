@@ -10,7 +10,7 @@ categories: ['Guides']
 
  
 
-> Updated - 13/12/2022 :  The installation is now easier with the new Terraform module - see [here](https://github.com/narmitag/terraform-examples/tree/main/eks-karpenter) for an example
+> Updated - 13/12/2022 :  The installation is now easier with the new Terraform module - see [here](https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/karpenter) for an example
 
 
  

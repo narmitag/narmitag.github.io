@@ -107,5 +107,5 @@ kind-worker3         Ready    <none>          13s   v1.25.3
 ## A specific Kubernetes version
 
 ```bash
-kind create cluster --image"kindest/node:v1.24.1"
+kind create cluster --image="kindest/node:v1.24.1"
 ```

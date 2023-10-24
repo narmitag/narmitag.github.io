@@ -8,8 +8,7 @@ My main aim for this site is to write simple HOWTO blogs about cloud based thing
 
 I don't claim to be an expert in anything, I've been around long enough to know anyone claiming to be an expert in any cloud technology is probably lying to themselves.
 
-I have been kicking around in IT for over 35 years now in various companies and startups including Skyscanner, VMWare, Continuent and at the moment I'm a Consultant at [Aker Systems](https://www.akersystems.com/)
-
+I have been kicking around in IT for over 35 years now in various companies and startups including Skyscanner, VMWare, Continuent, Amido and Aker Systems.
 All views are my own and unrelated to any employer past, present or future.
 
 Some of my Slide Decks can now be found on [speakerdeck](https://speakerdeck.com/neilarmitage)

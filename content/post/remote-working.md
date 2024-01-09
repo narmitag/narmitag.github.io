@@ -1,6 +1,6 @@
 ---
 title: "Remote working the good, bad and ugly" # Title of the blog post.
-date: 2024-01-10T08:38:20Z # Date of post creation.
+date: 2024-01-09T08:38:20Z # Date of post creation.
 description: "My views on how remote working should work" # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
 draft: false # Sets whether to render this page. Draft of true will not be rendered.

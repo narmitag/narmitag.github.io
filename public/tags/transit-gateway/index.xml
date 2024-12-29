@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Transit Gateway on Random Stuff From My Head</title>
+    <title>Transit Gateway on Neil Armitage</title>
     <link>https://neilarmitage.com/tags/transit-gateway/</link>
-    <description>Recent content in Transit Gateway on Random Stuff From My Head</description>
+    <description>Recent content in Transit Gateway on Neil Armitage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
-    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
     <lastBuildDate>Fri, 02 Dec 2022 12:44:02 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/transit-gateway/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up AWS Transit Gateway with Terraform</title>
-      <link>https://neilarmitage.com/posts/aws_transit_gateway_with_terraform/</link>
+      <link>https://neilarmitage.com/post/aws_transit_gateway_with_terraform/</link>
       <pubDate>Fri, 02 Dec 2022 12:44:02 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/posts/aws_transit_gateway_with_terraform/</guid>
-      <description>Transit Gateway allows VPC&amp;rsquo;s to be connected together into a single network as well as connecting to on-prem networks.
-This example will deploy a simple setup with 2 VPC&amp;rsquo;s being connected together.
-The Terraform code can be found on GitHub. The code also includes a RAM (Resource Access Manager) share for linking VPC&amp;rsquo;s in separate accounts but in this examples it&amp;rsquo;s not used.
-Just update any the reqruired settings in variables.</description>
+      
+      <guid>https://neilarmitage.com/post/aws_transit_gateway_with_terraform/</guid>
+      <description>
+        
+          
+            &lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/transit-gateway/&#34;&gt;Transit Gateway&lt;/a&gt; allows VPC&#39;s to be connected together into a single network as well as connecting to on-prem networks.&lt;/p&gt;
+&lt;p&gt;This example will deploy a simple setup with 2 VPC&#39;s being connected together.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;Image alt&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://neilarmitage.com/images/tgw.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The Terraform code can be found on &lt;a href=&#34;https://github.com/narmitag/terraform-examples/tree/main/transit_gateway&#34;&gt;GitHub&lt;/a&gt;. The code also includes a RAM (Resource Access Manager) share for linking VPC&#39;s in separate accounts but in this examples it&#39;s not used.&lt;/p&gt;
+&lt;p&gt;Just update any the reqruired settings in &lt;code&gt;variables.tf&lt;/code&gt; then deploy&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
   </channel>

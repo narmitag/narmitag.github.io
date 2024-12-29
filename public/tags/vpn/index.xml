@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>VPN on Random Stuff From My Head</title>
+    <title>VPN on Neil Armitage</title>
     <link>https://neilarmitage.com/tags/vpn/</link>
-    <description>Recent content in VPN on Random Stuff From My Head</description>
+    <description>Recent content in VPN on Neil Armitage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
-    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
     <lastBuildDate>Thu, 01 Dec 2022 12:43:03 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up AWS VPN</title>
-      <link>https://neilarmitage.com/posts/setting_up_aws_vpn/</link>
+      <link>https://neilarmitage.com/post/setting_up_aws_vpn/</link>
       <pubDate>Thu, 01 Dec 2022 12:43:03 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/posts/setting_up_aws_vpn/</guid>
-      <description>This example will deploy a VPN into an AWS VPC and show how to connect to it using OpenVPN from either a Mac or Linux host. It will use Certificates for authentication, many other authentication options are available.
-Terraform source code can be found at Github
-If will deploy a simple VPC in one AZ and then create a VPN, the required certificates for the VPN will be stored in AWS Parameter Store.</description>
+      
+      <guid>https://neilarmitage.com/post/setting_up_aws_vpn/</guid>
+      <description>
+        
+          
+            &lt;p&gt;This example will deploy a &lt;a href=&#34;https://aws.amazon.com/vpn/&#34;&gt;VPN&lt;/a&gt; into an AWS VPC and show how to connect to it using OpenVPN from either a Mac or Linux host. It will use
+Certificates for authentication, many other authentication options are available.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;Image alt&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://neilarmitage.com/images/vpn.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Terraform source code can be found at &lt;a href=&#34;https://github.com/narmitag/terraform-examples/tree/main/vpn&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If will deploy a simple VPC in one AZ and then create a VPN, the required certificates for the VPN will be stored in AWS Parameter Store.&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
   </channel>

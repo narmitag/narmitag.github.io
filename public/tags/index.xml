@@ -1,67 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Random Stuff From My Head</title>
+    <title>Tags on Neil Armitage</title>
     <link>https://neilarmitage.com/tags/</link>
-    <description>Recent content in Tags on Random Stuff From My Head</description>
+    <description>Recent content in Tags on Neil Armitage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
-    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
-    <lastBuildDate>Fri, 02 Dec 2022 14:59:57 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AWS</title>
-      <link>https://neilarmitage.com/tags/aws/</link>
-      <pubDate>Fri, 02 Dec 2022 14:59:57 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>terraform</title>
-      <link>https://neilarmitage.com/tags/terraform/</link>
-      <pubDate>Fri, 02 Dec 2022 14:59:57 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/tags/terraform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Transit Gateway</title>
-      <link>https://neilarmitage.com/tags/transit-gateway/</link>
-      <pubDate>Fri, 02 Dec 2022 12:44:02 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/tags/transit-gateway/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VPN</title>
-      <link>https://neilarmitage.com/tags/vpn/</link>
-      <pubDate>Thu, 01 Dec 2022 12:43:03 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/tags/vpn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>talks</title>
-      <link>https://neilarmitage.com/tags/talks/</link>
-      <pubDate>Wed, 14 Sep 2022 06:30:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/tags/talks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>EKS</title>
-      <link>https://neilarmitage.com/tags/eks/</link>
-      <pubDate>Fri, 29 Jul 2022 10:14:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/tags/eks/</guid>
-      <description></description>
-    </item>
-    
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 09 Jan 2024 08:38:20 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

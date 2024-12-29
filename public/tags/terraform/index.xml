@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>terraform on Random Stuff From My Head</title>
+    <title>Terraform on Neil Armitage</title>
     <link>https://neilarmitage.com/tags/terraform/</link>
-    <description>Recent content in terraform on Random Stuff From My Head</description>
+    <description>Recent content in Terraform on Neil Armitage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
-    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
     <lastBuildDate>Fri, 02 Dec 2022 14:59:57 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraform Testing</title>
-      <link>https://neilarmitage.com/posts/terraform_testing/</link>
+      <link>https://neilarmitage.com/post/terraform_testing/</link>
       <pubDate>Fri, 02 Dec 2022 14:59:57 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/posts/terraform_testing/</guid>
-      <description>For a long time I&amp;rsquo;ve been wanting to look at some way of testing terraform. As part of this I&amp;rsquo;ve recently looked using terratest and localstack.
-While localstack looks promising lots of the things I wanted to test are either in the pro version or not supported so I went back to using live AWS accounts. It would be nice to be able to use localstack in a pipeline, hopefully in the future.</description>
+      
+      <guid>https://neilarmitage.com/post/terraform_testing/</guid>
+      <description>
+        
+          
+            &lt;p&gt;For a long time I&#39;ve been wanting to look at some way of testing terraform. As part of this I&#39;ve recently looked using &lt;a href=&#34;https://terratest.gruntwork.io/&#34;&gt;terratest&lt;/a&gt; and &lt;a href=&#34;https://localstack.cloud/&#34;&gt;localstack&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While localstack looks promising lots of the things I wanted to test are either in the pro version or not supported so I went back to using live AWS accounts. It would be nice to be able to use localstack in a pipeline, hopefully in the future. I did get a simple pipeline running in &lt;a href=&#34;https://github.com/narmitag/localstack&#34;&gt;GitHub Actions&lt;/a&gt;&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
   </channel>

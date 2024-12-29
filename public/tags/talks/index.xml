@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>talks on Random Stuff From My Head</title>
+    <title>Talks on Neil Armitage</title>
     <link>https://neilarmitage.com/tags/talks/</link>
-    <description>Recent content in talks on Random Stuff From My Head</description>
+    <description>Recent content in Talks on Neil Armitage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
-    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
     <lastBuildDate>Wed, 14 Sep 2022 06:30:08 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/tags/talks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Avoiding pain when operating in the Cloud</title>
-      <link>https://neilarmitage.com/posts/cloudopen-europe-2022/</link>
+      <link>https://neilarmitage.com/post/cloudopen-europe-2022/</link>
       <pubDate>Wed, 14 Sep 2022 06:30:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/posts/cloudopen-europe-2022/</guid>
-      <description>I will be Speaking at the Open Source Summit Europe 2022 in Dublin
-The slides can be found on SpeakerDeck.</description>
+      
+      <guid>https://neilarmitage.com/post/cloudopen-europe-2022/</guid>
+      <description>
+        
+          
+            &lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;Image alt&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://neilarmitage.com/images/line_figure_headache_400_clr_10063.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+ I will be &lt;a href=&#34;https://sched.co/15yzG&#34;&gt;Speaking&lt;/a&gt;  at the &lt;a href=&#34;https://events.linuxfoundation.org/open-source-summit-europe/&#34;&gt;Open Source Summit Europe 2022&lt;/a&gt; in Dublin&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://speakerdeck.com/neilarmitage/avoiding-pain-when-operating-in-the-cloud&#34;&gt;slides&lt;/a&gt; can be found on SpeakerDeck.&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
   </channel>

@@ -1,49 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Random Stuff From My Head</title>
+    <title>Categories on Neil Armitage</title>
     <link>https://neilarmitage.com/categories/</link>
-    <description>Recent content in Categories on Random Stuff From My Head</description>
+    <description>Recent content in Categories on Neil Armitage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>neil@neilarmitage.com (Neil Armitage)</managingEditor>
-    <webMaster>neil@neilarmitage.com (Neil Armitage)</webMaster>
-    <lastBuildDate>Wed, 14 Sep 2022 06:30:08 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>cloudopen talks</title>
-      <link>https://neilarmitage.com/categories/cloudopen-talks/</link>
-      <pubDate>Wed, 14 Sep 2022 06:30:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/categories/cloudopen-talks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS K8S velero</title>
-      <link>https://neilarmitage.com/categories/aws-k8s-velero/</link>
-      <pubDate>Fri, 29 Jul 2022 10:14:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/categories/aws-k8s-velero/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS EKS</title>
-      <link>https://neilarmitage.com/categories/aws-eks/</link>
-      <pubDate>Thu, 12 May 2022 08:11:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/categories/aws-eks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>https://neilarmitage.com/categories/aws/</link>
-      <pubDate>Sun, 08 May 2022 14:38:08 +0000</pubDate>
-      <author>neil@neilarmitage.com (Neil Armitage)</author>
-      <guid>https://neilarmitage.com/categories/aws/</guid>
-      <description></description>
-    </item>
-    
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 09 Jan 2024 08:38:20 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Info on Neil Armitage</title>
+    <link>https://neilarmitage.com/categories/info/</link>
+    <description>Recent content in Info on Neil Armitage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2008–2023, Neil Armitage; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 02 Dec 2022 14:59:57 +0000</lastBuildDate><atom:link href="https://neilarmitage.com/categories/info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform Testing</title>
+      <link>https://neilarmitage.com/post/terraform_testing/</link>
+      <pubDate>Fri, 02 Dec 2022 14:59:57 +0000</pubDate>
+      
+      <guid>https://neilarmitage.com/post/terraform_testing/</guid>
+      <description>
+        
+          
+            &lt;p&gt;For a long time I&#39;ve been wanting to look at some way of testing terraform. As part of this I&#39;ve recently looked using &lt;a href=&#34;https://terratest.gruntwork.io/&#34;&gt;terratest&lt;/a&gt; and &lt;a href=&#34;https://localstack.cloud/&#34;&gt;localstack&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While localstack looks promising lots of the things I wanted to test are either in the pro version or not supported so I went back to using live AWS accounts. It would be nice to be able to use localstack in a pipeline, hopefully in the future. I did get a simple pipeline running in &lt;a href=&#34;https://github.com/narmitag/localstack&#34;&gt;GitHub Actions&lt;/a&gt;&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Deploying Nats Jetstream in AWS</title>
+      <link>https://neilarmitage.com/post/nats_jetstream_in_aws/</link>
+      <pubDate>Thu, 01 Dec 2022 12:43:36 +0000</pubDate>
+      
+      <guid>https://neilarmitage.com/post/nats_jetstream_in_aws/</guid>
+      <description>
+        
+          
+            &lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;Image alt&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://neilarmitage.com/images/nats-horizontal-color.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+ NATS is a connective technology that powers modern distributed systems. A connective technology is responsible for addressing, discovery and exchanging of messages that drive the common patterns in distributed systems; asking and answering questions, aka services/microservices, and making and processing statements, or stream processing.&lt;/p&gt;
+&lt;p&gt;An example installation using Terraform can be found on &lt;a href=&#34;https://github.com/narmitag/terraform-examples/tree/main/nats_jetstream&#34;&gt;GitHub&lt;/a&gt;, this deploys a VPC and the supporting infrastructure required along with a AWS instance running Ubuntu with NAT&#39;s installed. By default it enables &lt;a href=&#34;https://docs.nats.io/running-a-nats-service/nats_admin/security/jwt?q=nkey#what-are-nkeys&#34;&gt;NKEY&lt;/a&gt; authentication and stores both the User and Seed Keys in the AWS Parameter Store.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Using ACloudGuru AWS Sandboxes</title>
+      <link>https://neilarmitage.com/post/acloudguru-sandbox/</link>
+      <pubDate>Sun, 08 May 2022 14:38:08 +0000</pubDate>
+      
+      <guid>https://neilarmitage.com/post/acloudguru-sandbox/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Running your own AWS account for testing can lead to unexpected costs. Unless care is taken around securing the account, the account can be hijacked and used for other purposes. Personally I’ve stopped running my own accounts and moved to using the &lt;a href=&#34;https://acloudguru.com/platform/cloud-sandbox-playgrounds&#34;&gt;sandbox accounts&lt;/a&gt; provided by acloudguru as part of their Personal Plus subscription.&lt;/p&gt;
+&lt;p&gt;Most of the examples provided in the blog should run on these playgrounds with some exceptions. Generally the setup is using the &lt;a href=&#34;https://aws.amazon.com/cloudshell/&#34;&gt;AWS CloudShell&lt;/a&gt; within the sandbox account to remove any issue with local machine setups.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
